@@ -1,11 +1,10 @@
-**EE 534: BIG DATA <br />
-CHELSEA GORIUS  <br />
-GAVIN HEMMERLEIN <br />
-CLASS 11530 <br />
-FALL 2020 <br />
-NBA PERFORMANCE AND INJURY**
+# NBA PERFORMANCE AND INJURY
 
 
+* CHELSEA GORIUS, hid missing
+* GAVIN HEMMERLEIN, hid missing
+
+pageinfo and abstract missing see other reporst as submitted to piazza
 
 ## 1. Team
 
