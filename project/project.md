@@ -1,9 +1,7 @@
-# NBA PERFORMANCE AND INJURY
+# NBA Performance and Injury
 
-* [ ] do not use all caps for names
-
-* GAVIN HEMMERLEIN, fa20-523-301 
-* CHELSEA GORIUS, fa20-523-344
+* Gavin Hemmerlein, fa20-523-301 
+* Chelsea Gorius, fa20-523-344
 
 {{% pageinfo %}}
 
