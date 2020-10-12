@@ -28,7 +28,7 @@ The objective of this project is to develop performance indicators for injured p
 From this point, a test run will be used to gauge the validity and accuracy of the model compared to some of the data set aside.  The model created will be able to provide feature importance to give a better understanding of which specific features are the most crucial when it comes to determining how bad the effects of an injury may or may not be on player performance.  Feature engineering will be performed prior to training the model in order to improve the chances of higher accuracy from the predictions.  This model could be used to keep an eye out for how a player's performance intensity and the engineered features could affect how long a player takes to recover from injury, if there are any warning signs prior to an injury, and even how well they perform when returning.
 
 
-# 4. References
+## 4. References
 
 
 [^1]: A. Mehra, *Sports Medicine Market worth $7.2 billion by 2025*, Markets and Markets.
