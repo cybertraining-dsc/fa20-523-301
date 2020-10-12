@@ -1,6 +1,8 @@
 # NBA PERFORMANCE AND INJURY
 
-* GAVIN HEMMERLEIN, fa20-523-301
+* [ ] do not use all caps for names
+
+* GAVIN HEMMERLEIN, fa20-523-301 
 * CHELSEA GORIUS, fa20-523-344
 
 pageinfo and abstract missing see other reporst as submitted to piazza
