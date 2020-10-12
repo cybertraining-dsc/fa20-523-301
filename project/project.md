@@ -5,6 +5,20 @@
 * GAVIN HEMMERLEIN, fa20-523-301 
 * CHELSEA GORIUS, fa20-523-344
 
+{{% pageinfo %}}
+
+## Abstract
+
+* [ ] please add abstract
+
+Contents
+
+{{< table_of_contents >}}
+
+{{% /pageinfo %}}
+
+**Keywords:** please add keywords
+
 pageinfo and abstract missing see other reporst as submitted to piazza
 
 ## 1. Introduction
