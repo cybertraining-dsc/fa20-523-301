@@ -2,6 +2,7 @@
 
 * Gavin Hemmerlein, fa20-523-301 
 * Chelsea Gorius, fa20-523-344
+* [Edit](https://github.com/cybertraining-dsc/fa20-523-301/blob/master/project/project.md)
 
 {{% pageinfo %}}
 
