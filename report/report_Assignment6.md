@@ -2,7 +2,7 @@
 # Health and Medicine
 
 * Gavin Hemmerlein, fa20-523-301 
-* [Edit](https://github.com/cybertraining-dsc/fa20-523-301/blob/master/project/project.md)
+* [Edit](https://github.com/cybertraining-dsc/fa20-523-301/blob/master/report/report_Assignment6.md)
 
 {{% pageinfo %}}
 
@@ -57,7 +57,7 @@ The
 
 [^3]: N. Murray, "Artificial intelligence to diagnose ischemic stroke and identify large vessel occlusions: a systematic review," *Journal of NeuroInterventional Surgery*, vol. 12, no. 2, p. 156-164. 2020 [Online serial]. Available: https://jnis.bmj.com/content/12/2/156. [Accessed Oct. 13, 2020].
 
-[^4]: M. Stib, J. Vasquez, M. Dong, Y. Kim, S. Subzwari, H. Triedman, A. Wang, H. Wang, A. Yao, M. Jayaraman, J. Boxerman, C. Eickhoff, U. Cetintemel, G. Baird, and R. McTaggart, "Detecting Large Vessel Occlusion at Multiphase CT Angiography by Using a Deep Convolutional Neural Network", *Original Research Neuroradiology*, Sep 29, 2020. [Online serial]. Available: <https://pubs.rsna.org/doi/full/10.1148/radiol.2020200334>
+[^4]: M. Stib, J. Vasquez, M. Dong, Y. Kim, S. Subzwari, H. Triedman, A. Wang, H. Wang, A. Yao, M. Jayaraman, J. Boxerman, C. Eickhoff, U. Cetintemel, G. Baird, and R. McTaggart, "Detecting Large Vessel Occlusion at Multiphase CT Angiography by Using a Deep Convolutional Neural Network", *Original Research Neuroradiology*, Sep 29, 2020. [Online serial]. Available: <https://pubs.rsna.org/doi/full/10.1148/radiol.2020200334> [Accessed Oct. 13, 2020].
 
 
 
