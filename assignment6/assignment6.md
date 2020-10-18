@@ -4,6 +4,8 @@
 * Gavin Hemmerlein, fa20-523-301 
 * [Edit](https://github.com/cybertraining-dsc/fa20-523-301/blob/master/report/report_Assignment6.md)
 
+{{% pageinfo %}}
+
 Contents
 
 {{< table_of_contents >}}
