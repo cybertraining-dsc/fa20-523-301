@@ -20,9 +20,15 @@ Contents
 
 ## 1. Introduction
 
-The topic to be investigated is basketball player performance as it relates to injury. The topic of injury and recovery is a multi-billion dollar industry.  The Sports Medicine field is expected to reach $7.2 billion dollars by 2025 [^1].  The scope of this effort is to explore National Basketball Association(NBA) teams, but the additional uses of a topic such as this could expand into other realms such as the National Football League, Major League Baseball, the Olympic Committees, and many other avenues.  For leagues with salaries, projecting an expected return on the investment can assist in contract negotiations and cater expectations.
+The topic to be investigated is basketball player performance as it relates to injury. The topic of injury and recovery is a multi-billion dollar industry.  The Sports Medicine field is expected to reach $7.2 billion dollars by 2025 [^1].  The scope of this effort is to explore National Basketball Association(NBA) teams, but the additional uses of a topic such as this could expand into other realms such as the National Football League, Major League Baseball, the Olympic Committees, and many other avenues.  For leagues with salaries, projecting an expected return on the investment can assist in contract negotiations and cater expectations.  Competing at such a high level of intensity puts these players at a greater risk to injury than the average athlete because of the intense and constant strain on their bodies.  The overall valuation of the NBA in recent years is over 2 billion dollars, meaning each team is spending millions of dollars in the pursuit of a championship every season.  Injuries to players can cost teams not only wins but also significant profits.  Ticket sales alone for a single NBA finals game have reported greater than 10 million dollars in profit for the home team, if a team's star player gets injured just before the playoffs and the team does not succeed, that is a lot of money lost.  These injuries can have an effect no matter the time of year, regular season ticket sales have been known to fluctuate with injuries from the team's top performers.  Besides ticket sales these injuries can also influence viewrship, TV or streaming, and potentially lead to a greater loss in profits.  With the health of the players and so much money at stake NBA team organizations as a whole do their best to take care of their players and keep them injury free.
 
-## 2. Dataset
+## 2. Objective
+
+The objective of this project is to develop performance indicators for injured players returning to basketball in the NBA.  It is unreasonable to expect a player to return to the same level of play post injury immediately upon starting back up after recovery.  It often takes a player months if not years to return to the same level of play as pre-injury, especially considering the severity of the injuries.  In order to successfully analyse this information from the datasets, a predictive model will need to be created using a large set of the data to train. 
+
+From this point, a test run will be used to gauge the validity and accuracy of the model compared to some of the data set aside.  The model created will be able to provide feature importance to give a better understanding of which specific features are the most crucial when it comes to determining how bad the effects of an injury may or may not be on player performance.  Feature engineering will be performed prior to training the model in order to improve the chances of higher accuracy from the predictions.  This model could be used to keep an eye out for how a player's performance intensity and the engineered features could affect how long a player takes to recover from injury, if there are any warning signs prior to an injury, and even how well they perform when returning.
+
+## 3. Dataset
 
 To compare performance and injury, a minimum of two datasets will be needed. The first is a dataset of injuries for players [^2]. This dataset will create the samples necessary for review.
 
@@ -32,15 +38,11 @@ Along the way we look forward to discovering if there is also a causal relations
 
 These datasets were chosen because they allow for a review of individual game performance, for each team, throughout each season in the recent decade.  Aggregate statistics such as points per game (ppg) can be deceptive because duration of the metric is such a large period of time.  The large sample of 82 games can lead to a perception issue when reviewing the data.  These datasets include more variables to help us determine effects to player injury, such as minutes per game (mpg) to understand how strenuous the pre-injury performance or how fatigue may have played a factor in the injury.  Understanding more of the variables such as fouls given or drawn can help determine if the player or other team seemed to be the primary aggressor before any injury.  
 
-## 3. Objective
+## 4. Work Breakdown 
+ Initial Project Report - Gorius, Hemmerlein
+ Predictive Model - breakdown udetermined at this time
 
-The objective of this project is to develop performance indicators for injured players returning to basketball in the NBA.  It is unreasonable to expect a player to return to the same level of play post injury immediately upon starting back up after recovery.  It often takes a player months if not years to return to the same level of play as pre-injury, especially considering the severity of the injuries.  In order to successfully analyse this information from the datasets, a predictive model will need to be created using a large set of the data to train. 
-
-From this point, a test run will be used to gauge the validity and accuracy of the model compared to some of the data set aside.  The model created will be able to provide feature importance to give a better understanding of which specific features are the most crucial when it comes to determining how bad the effects of an injury may or may not be on player performance.  Feature engineering will be performed prior to training the model in order to improve the chances of higher accuracy from the predictions.  This model could be used to keep an eye out for how a player's performance intensity and the engineered features could affect how long a player takes to recover from injury, if there are any warning signs prior to an injury, and even how well they perform when returning.
-
-
-## 4. References
-
+## 5. References
 
 [^1]: A. Mehra, *Sports Medicine Market worth $7.2 billion by 2025*, Markets and Markets.
  <https://www.marketsandmarkets.com/PressReleases/sports-medicine-devices.asp>
