@@ -39,10 +39,25 @@ Along the way we look forward to discovering if there is also a causal relations
 These datasets were chosen because they allow for a review of individual game performance, for each team, throughout each season in the recent decade.  Aggregate statistics such as points per game (ppg) can be deceptive because duration of the metric is such a large period of time.  The large sample of 82 games can lead to a perception issue when reviewing the data.  These datasets include more variables to help us determine effects to player injury, such as minutes per game (mpg) to understand how strenuous the pre-injury performance or how fatigue may have played a factor in the injury.  Understanding more of the variables such as fouls given or drawn can help determine if the player or other team seemed to be the primary aggressor before any injury.  
 
 ## 4. Work Breakdown 
- Initial Project Report - Gorius, Hemmerlein
- Predictive Model - breakdown udetermined at this time
 
-## 5. References
+The initial model that was used was a Logistic Regression model. This model produced results of *X*. These results
+
+After running a Logistic Regression model, the decision was made to try multiple models to see what gives the best results. The team decided to use a Linear Regression model.
+
+**Any other models, LightGBM? Any Decision Trees?**
+
+The final model attempted was a Keras model. A few runs of different layers and epochs were chosen. The models sequentially ran through the test layers to refine the model. When this is done, each predecessor layer acts as an input to the next layer's model. The results can produce accurate results while using unsupervised learning.  
+ 
+ ## 5. Conclusions
+ 
+ After reviewing the results, performance does indeed appear to degrade over time. 
+ 
+ These results are consistent with the current scientific literature [^a] [^b].
+
+Initial Project Report - Gorius, Hemmerlein
+Predictive Model - breakdown udetermined at this time
+
+## 6. References
 
 [^1]: A. Mehra, *Sports Medicine Market worth $7.2 billion by 2025*, Markets and Markets.
  <https://www.marketsandmarkets.com/PressReleases/sports-medicine-devices.asp>
@@ -52,6 +67,12 @@ These datasets were chosen because they allow for a review of individual game pe
 [^3]: N. Lauga, *NBA games data*, Kaggle.  <https://www.kaggle.com/nathanlauga/nba-games?select=games_details.csv>
 
 [^4]: P. Rossotti, *NBA Enhanced Box Score and Standings (2012 - 2018)*, Kaggle. <https://www.kaggle.com/pablote/nba-enhanced-stats>
+
+[^a]: https://pubmed.ncbi.nlm.nih.gov/24427434/
+
+[^b]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3445177/  
+
+
 
 
 
