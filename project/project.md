@@ -73,6 +73,19 @@ Predictive Model - breakdown udetermined at this time
 
 The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and the associate instructors in the *FA20-BL-ENGR-E534-11530: Big Data Applications* course (offered in the Fall 2020 semester at Indiana University, Bloomington) for their continued assistance and suggestions with regard to exploring this idea and also for their aid with preparing the various drafts of this article.
 
+### 7.1 Work Breakdown
+
+For the effort developed, the team split tasks between each other to cover more ground. The requirements for the investigation required a more extensive effort for the teams in the ENGR-E 534 class. To accomplish the requirements, the task was expanded by addressing multiple datasets within the semester and building in multiple models to display the results. The team members were responsible for committing in Github multiple times throughout the semester. The tasks were divided as follows:
+
+1. Chelsea Gorius
+   * Exploratory Data Analysis
+   * Feature Engineering
+2. Gavin Hemmerlein
+   * Organization of items
+   * Model Development
+3. Both
+   * All outstanding items
+
 ## 8. References
 
 [^1]: A. Mehra, *Sports Medicine Market worth $7.2 billion by 2025*, Markets and Markets.
