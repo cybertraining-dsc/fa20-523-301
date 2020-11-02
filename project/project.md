@@ -16,7 +16,7 @@ Contents
 
 {{% /pageinfo %}}
 
-**Keywords:** basketball, NBA, injury, performance, salary, rehabilitation, artificial intelligence, convolutional neural network, CNN, 
+**Keywords:** basketball, NBA, injury, performance, salary, rehabilitation, artificial intelligence, convolutional neural network.
 
 ## 1. Introduction
 
