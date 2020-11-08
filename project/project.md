@@ -46,13 +46,39 @@ From this point, a test run will be used to gauge the validity and accuracy of t
 
 ### 4.1 Development of Models
 
+To help with review of the data, conditioned data was used to save resources on Google Colab. By conditioning the data and saving the files as a .CSV, the team was able to create a streamlined process. Additionally, the team found benefit by uploading these files to Google Drive to quickly import data near realtime. The files saved were the following:
+
+| Dataframe     | Title |
+| :---        |    :----:  |
+| 1.   | df_Injury_End      |
+| 2.   | df_Injury_length       |
+| 3.   | df_Injury_Start       |
+| 4.   | games      |
+| 5.   | games_details       |
+| 6.   | injuries_2010-2018       |
+| 7.   | players      |
+| 8.   | ranking       |
+| 9.   | teams       |
+
+Everytime Google Colab loades data, it takes time and resources. The team was able to utilize the crossplatform connectivity of the Google utilities. The team could then focus on building models as opposed to conditioning data every time the code was ran.
+
+#### 4.1.1 Logistics Regression
+
 The initial model that was used was a Logistic Regression model. This model produced results of *X*. These results
 
 After running a Logistic Regression model, the decision was made to try multiple models to see what gives the best results. The team decided to use a Linear Regression model.
 
+#### 4.1.2 LightGBM Regression
+
 Another algorithm chosen was a Light Gradient Boost Machine (LightGBM) model. LightGBM is known for it's lightweight and resource sparse abilities. The model is built from decision tree algorithms and used for ranking, classification, and other machine learning tasks. By choosing LightGBM data scientists are able to analyze larger data a faster approach. LightGBM  can often over fit a model if the data is too small, but fortunately for the purpose of this assignment the data available for NBA injuries and stats is extremely large. Availability of data allowed for smooth operation of the LightGBM model.
 
-The final model attempted was a Keras model. A few runs of different layers and epochs were chosen. The models sequentially ran through the test layers to refine the model. When this is done, each predecessor layer acts as an input to the next layer's model. The results can produce accurate results while using unsupervised learning.  
+#### 4.1.3 Keras Deep Learning Models
+
+The final model attempted was a Deep Learning model. A few runs of different layers and epochs were chosen. The models sequentially ran through the test layers to refine the model. When this is done, each predecessor layer acts as an input to the next layer's model. The results can produce accurate results while using unsupervised learning. The visualization for this model can be seen in the following figure:
+
+![Neural Network](https://insidebigdata.com/wp-content/uploads/2018/10/Neural-Network-diagram.jpg)
+
+When the team ran the Neural Networks, the data went through three layers. Each layer was built upon the previous similarly to the figure. This allowed for the team to capture information from the processing.
 
 ## 5. Inference
 
