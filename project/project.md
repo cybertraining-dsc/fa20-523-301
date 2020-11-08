@@ -16,7 +16,7 @@ Contents
 
 {{% /pageinfo %}}
 
-**Keywords:** basketball, NBA, injury, performance, salary, rehabilitation, artificial intelligence, convolutional neural network.
+**Keywords:** basketball, NBA, injury, performance, salary, rehabilitation, artificial intelligence, convolutional neural network, Logistic Regressor, LightGBM.
 
 ## 1. Introduction
 
@@ -66,11 +66,21 @@ Everytime Google Colab loades data, it takes time and resources. The team was ab
 
 The initial model that was used was a Logistic Regression model. This model produced results of *X*. These results
 
+![Logistic Regressor](https://helloacm.com/wp-content/uploads/2016/03/logistic-regression-example.jpg)
+
+*Figure 1: Logistic Regressor*
+
 After running a Logistic Regression model, the decision was made to try multiple models to see what gives the best results. The team decided to use a Linear Regression model.
 
 #### 4.1.2 LightGBM Regression
 
-Another algorithm chosen was a Light Gradient Boost Machine (LightGBM) model. LightGBM is known for it's lightweight and resource sparse abilities. The model is built from decision tree algorithms and used for ranking, classification, and other machine learning tasks. By choosing LightGBM data scientists are able to analyze larger data a faster approach. LightGBM  can often over fit a model if the data is too small, but fortunately for the purpose of this assignment the data available for NBA injuries and stats is extremely large. Availability of data allowed for smooth operation of the LightGBM model.
+Another algorithm chosen was a Light Gradient Boost Machine (LightGBM) model. LightGBM is known for it's lightweight and resource sparse abilities. The model is built from decision tree algorithms and used for ranking, classification, and other machine learning tasks. By choosing LightGBM data scientists are able to analyze larger data a faster approach. LightGBM  can often over fit a model if the data is too small, but fortunately for the purpose of this assignment the data available for NBA injuries and stats is extremely large. Availability of data allowed for smooth operation of the LightGBM model. Mandot explains the model really well in The Medium. Mandot said, "Light GBM can handle the large size of data and takes lower memory to run. Another reason of why Light GBM is popular is because it focuses on accuracy of results. LGBM also supports GPU learning and thus data scientists are widely using LGBM for data science application development." [^a]. There are a lot of benefits available to this algorithm.
+
+![LightGBM Algorithm: Leafwise searching](https://miro.medium.com/max/1050/1*AZsSoXb8lc5N6mnhqX5JCg.png)
+
+*Figure 2: LightGBM Algorithm: Leafwise searching*
+
+When running the model, we saw promising results.
 
 #### 4.1.3 Keras Deep Learning Models
 
@@ -78,7 +88,7 @@ The final model attempted was a Deep Learning model. A few runs of different lay
 
 ![Neural Network](https://img.securityinfowatch.com/files/base/cygnus/siw/image/2019/02/Figure_01.5c7712513151e.png?auto=format&h=553&w=1280)
 
-*Figure 1: Neural Network*
+*Figure 3: Neural Network*
 
 When the team ran the Neural Networks, the data went through three layers. Each layer was built upon the previous similarly to the figure. This allowed for the team to capture information from the processing.
 
@@ -134,6 +144,8 @@ For the effort developed, the team split tasks between each other to cover more 
 [^5]: N. Lauga, *NBA games data*, Kaggle.  <https://www.kaggle.com/nathanlauga/nba-games?select=games_details.csv>
 
 [^6]: P. Rossotti, *NBA Enhanced Box Score and Standings (2012 - 2018)*, Kaggle. <https://www.kaggle.com/pablote/nba-enhanced-stats>
+
+[^a]: P. Mandon, *What is LightGBM, How to implement it? How to fine tune the parameters?*, Medium. <https://medium.com/@pushkarmandot/https-medium-com-pushkarmandot-what-is-lightgbm-how-to-implement-it-how-to-fine-tune-the-parameters-60347819b7fc>
 
 
 
