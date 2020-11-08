@@ -76,7 +76,8 @@ Another algorithm chosen was a Light Gradient Boost Machine (LightGBM) model. Li
 
 The final model attempted was a Deep Learning model. A few runs of different layers and epochs were chosen. The models sequentially ran through the test layers to refine the model. When this is done, each predecessor layer acts as an input to the next layer's model. The results can produce accurate results while using unsupervised learning. The visualization for this model can be seen in the following figure:
 
-![Neural Network](https://insidebigdata.com/wp-content/uploads/2018/10/Neural-Network-diagram.jpg)
+![Neural Network](https://www.securityinfowatch.com/video-surveillance/video-analytics/article/21069937/deep-learning-to-the-rescue)
+Figure 1: Neural Network
 
 When the team ran the Neural Networks, the data went through three layers. Each layer was built upon the previous similarly to the figure. This allowed for the team to capture information from the processing.
 
