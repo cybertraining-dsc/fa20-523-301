@@ -38,6 +38,32 @@ Along the way we look forward to discovering if there is also a causal relations
 
 These datasets were chosen because they allow for a review of individual game performance, for each team, throughout each season in the recent decade.  Aggregate statistics such as points per game (ppg) can be deceptive because duration of the metric is such a large period of time.  The large sample of 82 games can lead to a perception issue when reviewing the data.  These datasets include more variables to help us determine effects to player injury, such as minutes per game (mpg) to understand how strenuous the pre-injury performance or how fatigue may have played a factor in the injury.  Understanding more of the variables such as fouls given or drawn can help determine if the player or other team seemed to be the primary aggressor before any injury.  
 
+### 3.1 Engineering Data Analysis
+
+.
+
+![Average Minutes Played in First Five Games Upon Return over Injury Length in Days](https://i.ibb.co/DWgHqsR/Avg-Minutes-Played-in-Post-5-per-injury-length.png)
+
+*Figure 1: Average Minutes Played in First Five Games Upon Return over Injury Length in Days*
+
+.
+
+![Frequency of Injuries by Average Minutes Played in Prior Five Games](https://i.ibb.co/dDNMqkt/Frequencies-by-average-minutes.png)
+
+*Figure 2: Frequency of Injuries by Average Minutes Played in Prior Five Games*
+
+.
+
+![Injury Length in Days over Number of Injuries](https://i.ibb.co/fMZZHxX/injury-length.png)
+
+*Figure 3: Injury Length in Days over Number of Injuries*
+
+.
+
+![Injury Length in Days over Avg Minutes Plaed in Prior 5 Games](https://i.ibb.co/rwDRpLF/injury-length-over-avg-min.png)
+
+*Figure 4: Injury Length in Days over Avg Minutes Plaed in Prior 5 Games*
+
 ## 4. Methodology
 
 The objective of this project is to develop performance indicators for injured players returning to basketball in the NBA.  It is unreasonable to expect a player to return to the same level of play post injury immediately upon starting back up after recovery.  It often takes a player months if not years to return to the same level of play as pre-injury, especially considering the severity of the injuries.  In order to successfully analyse this information from the datasets, a predictive model will need to be created using a large set of the data to train. 
@@ -47,6 +73,8 @@ From this point, a test run will be used to gauge the validity and accuracy of t
 ### 4.1 Development of Models
 
 To help with review of the data, conditioned data was used to save resources on Google Colab. By conditioning the data and saving the files as a .CSV, the team was able to create a streamlined process. Additionally, the team found benefit by uploading these files to Google Drive to quickly import data near realtime. The files saved were the following:
+
+*Table 1: Model Development*
 
 | Dataframe     | Title |
 | :---        |    :----:  |
@@ -68,7 +96,7 @@ The initial model that was used was a Logistic Regression model. This model prod
 
 ![Logistic Regressor](https://helloacm.com/wp-content/uploads/2016/03/logistic-regression-example.jpg)
 
-*Figure 1: Logistic Regressor*
+*Figure 5: Logistic Regressor*
 
 After running a Logistic Regression model, the decision was made to try multiple models to see what gives the best results. The team decided to use a Linear Regression model.
 
@@ -78,7 +106,7 @@ Another algorithm chosen was a Light Gradient Boost Machine (LightGBM) model. Li
 
 ![LightGBM Algorithm: Leafwise searching](https://miro.medium.com/max/1050/1*AZsSoXb8lc5N6mnhqX5JCg.png)
 
-*Figure 2: LightGBM Algorithm: Leafwise searching*
+*Figure 6: LightGBM Algorithm: Leafwise searching*
 
 When running the model, we saw promising results.
 
@@ -88,7 +116,7 @@ The final model attempted was a Deep Learning model. A few runs of different lay
 
 ![Neural Network](https://img.securityinfowatch.com/files/base/cygnus/siw/image/2019/02/Figure_01.5c7712513151e.png?auto=format&h=553&w=1280)
 
-*Figure 3: Neural Network*
+*Figure 7: Neural Network*
 
 When the team ran the Neural Networks, the data went through three layers. Each layer was built upon the previous similarly to the figure. This allowed for the team to capture information from the processing.
 
