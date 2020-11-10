@@ -43,9 +43,33 @@ These datasets were chosen because they allow for a review of individual game pe
 
 ###3.1 Data Transformations and Calculations
 Using the Kaggle package the datasets are downloaded direct from the website and unzipped to a directory accessible by the ‘project_dateEngineering.ipynb’ notebook.  The 7 unzipped datasets are then loaded into the notebook as pandas data frames using the ‘.read_csv()’ function.  The data engineering performed in the notebook includes removal of excess data and data type transformations across almost all the data frames loaded. This data transformation includes transforming the games details column ‘MIN’, meaning minutes played, from a timestamp format to a numerical format that could have calculations like summation or average performed on it. This was a crucial transformation since minutes played have a direct correlation to player fatigue, which can increase a player’s chance of injury.
+
 One of the more difficult tasks was transforming the Injury dataset into something that would provide more information through machine learning and analysis.  The dataset is loaded as one data set where 2 columns ‘Relinquished’ and ‘Acquired’ defined if the row in questions was a player leaving the roster due to injury or returning from injury, respectively.   In this case for each for one of those two columns contained a players name and the other was blank. Besides that the data frame contained information like the date, notes, and the team name.  In order to appropriately understand each injury as whole the data frame needs to be transformed into one where each row contains the player, the start date of the injury, and the end date of the injury.  In order to do this first the original Injury dataset was separated into rows marking the start of an injury and those marking the end of an injury. Data frames from the *NBA games data* [^5] data set were used to join TeamID and PlayerID columns to the Injury datasets. An ‘iterrows():’ loop was then used on the data frame marking the start of an injury to specifically locate the corresponding row in the Injury End data frame with the same PlayerID and where the return date was the closest date after the injury date.  As this new data frame was being transformed, it was noted that sometimes a Player would have multiple rows with the same Injury ending date but different injury start dates, this can happen if an injury worsens or the player did not play due to last minute decision. In order to solve this the table was grouped by the PlayerID and InjuryEnd Date while keeping the oldest Injury Start date, since the model will want to see the full length of the injury.  From there it was simple to calculate the difference in days for each row between the Injury start and end dates. This data frame is called ‘df_Injury_length’ in the notebook and is much easier to use for improved understanding of NBA injuries than the original format of the Injury data set.
+
 Once created, the ‘df_Injury_length’ data frame was copied and built upon.  Using ‘iterrows():’ loop again to filter down the games details data frame rows with the same PlayerId, over 60 calculated columns are created to produce the ‘df_Injury_stats’ data frame.  The data frame includes performance statistics specifically from the game the player was injured and the game the player returned from that injury.  In addition to this aggregate performance metrics were calculated based on the 5 games prior to the injury and the 5 games post returning from injury.  At this time the season of when the injury occurred and when the player returned is also stored in the dataframe. This will allow comparisons between the ‘df_Injury_stats’ data frame and the ‘df_Season_stats’ data frame which contains the players average performance metrics for entire seasons. 
 
+
+![Average Minutes Played in First Five Games Upon Return over Injury Length in Days](https://i.ibb.co/DWgHqsR/Avg-Minutes-Played-in-Post-5-per-injury-length.png)
+
+*Figure 1: Average Minutes Played in First Five Games Upon Return over Injury Length in Days*
+
+.
+
+![Frequency of Injuries by Average Minutes Played in Prior Five Games](https://i.ibb.co/dDNMqkt/Frequencies-by-average-minutes.png)
+
+*Figure 2: Frequency of Injuries by Average Minutes Played in Prior Five Games*
+
+.
+
+![Injury Length in Days over Number of Injuries](https://i.ibb.co/fMZZHxX/injury-length.png)
+
+*Figure 3: Injury Length in Days over Number of Injuries*
+
+.
+
+![Injury Length in Days over Avg Minutes Plaed in Prior 5 Games](https://i.ibb.co/rwDRpLF/injury-length-over-avg-min.png)
+
+*Figure 4: Injury Length in Days over Avg Minutes Plaed in Prior 5 Games*
 
 ## 4. Methodology
 
@@ -75,9 +99,9 @@ Every time Google Colab loads data, it takes time and resources. The team was ab
 
 The initial model that was used was a Logistic Regression model. This model produced results of *X*. These results
 
-![Logistic Regressor](https://helloacm.com/wp-content/uploads/2016/03/logistic-regression-example.jpg)
+![Logistic Regressor](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/logistic-regression-example.jpg)
 
-*Figure 1: Logistic Regressor*
+**Figure 1:** Logistic Regressor [^LogReg]
 
 After running a Logistic Regression model, the decision was made to try multiple models to see what gives the best results. The team decided to use a Linear Regression model.
 
@@ -85,9 +109,9 @@ After running a Logistic Regression model, the decision was made to try multiple
 
 Another algorithm chosen was a Light Gradient Boost Machine (LightGBM) model. LightGBM is known for its lightweight and resource sparse abilities. The model is built from decision tree algorithms and used for ranking, classification, and other machine learning tasks. By choosing LightGBM data scientists are able to analyze larger data a faster approach. LightGBM  can often over fit a model if the data is too small, but fortunately for the purpose of this assignment the data available for NBA injuries and stats is extremely large. Availability of data allowed for smooth operation of the LightGBM model. Mandot explains the model really well in The Medium. Mandot said, "Light GBM can handle the large size of data and takes lower memory to run. Another reason of why Light GBM is popular is because it focuses on accuracy of results. LGBM also supports GPU learning and thus data scientists are widely using LGBM for data science application development." [^a]. There are a lot of benefits available to this algorithm.
 
-![LightGBM Algorithm: Leafwise searching](https://miro.medium.com/max/1050/1*AZsSoXb8lc5N6mnhqX5JCg.png)
+![LightGBM Algorithm: Leafwise searching](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/lightGBM_regressor.png)
 
-*Figure 2: LightGBM Algorithm: Leafwise searching*
+**Figure 2:** LightGBM Algorithm: Leafwise searching [^LGBMReg]
 
 When running the model, we saw promising results.
 
@@ -95,9 +119,9 @@ When running the model, we saw promising results.
 
 The final model attempted was a Deep Learning model. A few runs of different layers and epochs were chosen. The models sequentially ran through the test layers to refine the model. When this is done, each predecessor layer acts as an input to the next layer's model. The results can produce accurate results while using unsupervised learning. The visualization for this model can be seen in the following figure:
 
-![Neural Network](https://img.securityinfowatch.com/files/base/cygnus/siw/image/2019/02/Figure_01.5c7712513151e.png?auto=format&h=553&w=1280)
+![Neural Network](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/simple_neural_network_vs_deep_learning.jpg)
 
-*Figure 3: Neural Network*
+**Figure 3:** Neural Network [^NeuNet]
 
 When the team ran the Neural Networks, the data went through three layers. Each layer was built upon the previous similarly to the figure. This allowed for the team to capture information from the processing.
 
@@ -156,7 +180,11 @@ For the effort developed, the team split tasks between each other to cover more 
 
 [^a]: P. Mandon, *What is LightGBM, How to implement it? How to fine tune the parameters?*, Medium. <https://medium.com/@pushkarmandot/https-medium-com-pushkarmandot-what-is-lightgbm-how-to-implement-it-how-to-fine-tune-the-parameters-60347819b7fc>
 
+[^LogReg]: <https://helloacm.com/a-short-introduction-logistic-regression-algorithm/>
 
+[^LGBMReg]: <https://medium.com/@pushkarmandot/https-medium-com-pushkarmandot-what-is-lightgbm-how-to-implement-it-how-to-fine-tune-the-parameters-60347819b7fc>
+
+[^NeuNet]: <https://thedatascientist.com/what-deep-learning-is-and-isnt/>
 
 
 
