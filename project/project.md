@@ -41,7 +41,7 @@ Along the way we look forward to discovering if there is also a causal relations
 
 These datasets were chosen because they allow for a review of individual game performance, for each team, throughout each season in the recent decade.  Aggregate statistics such as points per game (ppg) can be deceptive because duration of the metric is such a large period of time.  The large sample of 82 games can lead to a perception issue when reviewing the data.  These datasets include more variables to help us determine effects to player injury, such as minutes per game (mpg) to understand how strenuous the pre-injury performance or how fatigue may have played a factor in the injury.  Understanding more of the variables such as fouls given or drawn can help determine if the player or other team seemed to be the primary aggressor before any injury.  
 
-###3.1 Data Transformations and Calculations
+### 3.1 Data Transformations and Calculations
 Using the Kaggle package the datasets are downloaded direct from the website and unzipped to a directory accessible by the ‘project_dateEngineering.ipynb’ notebook.  The 7 unzipped datasets are then loaded into the notebook as pandas data frames using the ‘.read_csv()’ function.  The data engineering performed in the notebook includes removal of excess data and data type transformations across almost all the data frames loaded. This data transformation includes transforming the games details column ‘MIN’, meaning minutes played, from a timestamp format to a numerical format that could have calculations like summation or average performed on it. This was a crucial transformation since minutes played have a direct correlation to player fatigue, which can increase a player’s chance of injury.
 
 One of the more difficult tasks was transforming the Injury dataset into something that would provide more information through machine learning and analysis.  The dataset is loaded as one data set where 2 columns ‘Relinquished’ and ‘Acquired’ defined if the row in questions was a player leaving the roster due to injury or returning from injury, respectively.   In this case for each for one of those two columns contained a players name and the other was blank. Besides that the data frame contained information like the date, notes, and the team name.  In order to appropriately understand each injury as whole the data frame needs to be transformed into one where each row contains the player, the start date of the injury, and the end date of the injury.  In order to do this first the original Injury dataset was separated into rows marking the start of an injury and those marking the end of an injury. Data frames from the *NBA games data* [^5] data set were used to join TeamID and PlayerID columns to the Injury datasets. An ‘iterrows():’ loop was then used on the data frame marking the start of an injury to specifically locate the corresponding row in the Injury End data frame with the same PlayerID and where the return date was the closest date after the injury date.  As this new data frame was being transformed, it was noted that sometimes a Player would have multiple rows with the same Injury ending date but different injury start dates, this can happen if an injury worsens or the player did not play due to last minute decision. In order to solve this the table was grouped by the PlayerID and InjuryEnd Date while keeping the oldest Injury Start date, since the model will want to see the full length of the injury.  From there it was simple to calculate the difference in days for each row between the Injury start and end dates. This data frame is called ‘df_Injury_length’ in the notebook and is much easier to use for improved understanding of NBA injuries than the original format of the Injury data set.
@@ -49,27 +49,27 @@ One of the more difficult tasks was transforming the Injury dataset into somethi
 Once created, the ‘df_Injury_length’ data frame was copied and built upon.  Using ‘iterrows():’ loop again to filter down the games details data frame rows with the same PlayerId, over 60 calculated columns are created to produce the ‘df_Injury_stats’ data frame.  The data frame includes performance statistics specifically from the game the player was injured and the game the player returned from that injury.  In addition to this aggregate performance metrics were calculated based on the 5 games prior to the injury and the 5 games post returning from injury.  At this time the season of when the injury occurred and when the player returned is also stored in the dataframe. This will allow comparisons between the ‘df_Injury_stats’ data frame and the ‘df_Season_stats’ data frame which contains the players average performance metrics for entire seasons. 
 
 
-![Average Minutes Played in First Five Games Upon Return over Injury Length in Days](https://i.ibb.co/DWgHqsR/Avg-Minutes-Played-in-Post-5-per-injury-length.png)
+![Average Minutes Played in First Five Games Upon Return over Injury Length in Days](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/avg_Minutes_Played_in_Post_5_per_injury_length.PNG)
 
-*Figure 1: Average Minutes Played in First Five Games Upon Return over Injury Length in Days*
-
-.
-
-![Frequency of Injuries by Average Minutes Played in Prior Five Games](https://i.ibb.co/dDNMqkt/Frequencies-by-average-minutes.png)
-
-*Figure 2: Frequency of Injuries by Average Minutes Played in Prior Five Games*
+**Figure 1:** Average Minutes Played in First Five Games Upon Return over Injury Length in Days*
 
 .
 
-![Injury Length in Days over Number of Injuries](https://i.ibb.co/fMZZHxX/injury-length.png)
+![Frequency of Injuries by Average Minutes Played in Prior Five Games](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/frequencies_by_average_minutes.png)
 
-*Figure 3: Injury Length in Days over Number of Injuries*
+**Figure 2:** Frequency of Injuries by Average Minutes Played in Prior Five Games*
 
 .
 
-![Injury Length in Days over Avg Minutes Plaed in Prior 5 Games](https://i.ibb.co/rwDRpLF/injury-length-over-avg-min.png)
+![Injury Length in Days over Number of Injuries](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/injury_length.png)
 
-*Figure 4: Injury Length in Days over Avg Minutes Plaed in Prior 5 Games*
+**Figure 3:** Injury Length in Days over Number of Injuries
+
+.
+
+![Injury Length in Days over Avg Minutes Plaed in Prior 5 Games](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/injury_length_over_avg_min.png)
+
+**Figure 4:** Injury Length in Days over Avg Minutes Plaed in Prior 5 Games
 
 ## 4. Methodology
 
