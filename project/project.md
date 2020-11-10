@@ -1,5 +1,8 @@
 # NBA Performance and Injury
 
+[![Check Report](https://github.com/cybertraining-dsc/fa20-523-301/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-301/actions)
+
+
 * Gavin Hemmerlein, fa20-523-301 
 * Chelsea Gorius, fa20-523-344
 * [Edit](https://github.com/cybertraining-dsc/fa20-523-301/blob/master/project/project.md)
