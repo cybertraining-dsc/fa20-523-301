@@ -1,9 +1,9 @@
-## EE 534: BIG DATA
-## CHELSEA GORIUS 
-## GAVIN HEMMERLEIN
-## CLASS 11530
-## FALL 2020
-## NBA PERFORMANCE AND INJURY
+**EE 534: BIG DATA
+CHELSEA GORIUS 
+GAVIN HEMMERLEIN
+CLASS 11530
+FALL 2020
+NBA PERFORMANCE AND INJURY**
 
 
 
@@ -13,13 +13,13 @@ Our team will consist of Chelsea Gorius (cgorius - fa20-523-344) and Gavin Hemme
 
 ## 2. Topic
 
-The topic to be investigated is basketball player performance as it relates to injury. The topic of injury and recovery is a multi-billion dollar industry.  The Sports Medicine field is expected to reach $7.2 billion dollars by 2025 [1].  The scope of this effort is to explore National Basketball Association(NBA) teams, but the additional uses of a topic such as this could expand into other realms such as the National Football League, Major League Baseball, the Olympic Committees, and many other avenues.  For leagues with salaries, projecting an expected return on the investment can assist in contract negotiations and cater expectations.
+The topic to be investigated is basketball player performance as it relates to injury. The topic of injury and recovery is a multi-billion dollar industry.  The Sports Medicine field is expected to reach $7.2 billion dollars by 2025 [^1].  The scope of this effort is to explore National Basketball Association(NBA) teams, but the additional uses of a topic such as this could expand into other realms such as the National Football League, Major League Baseball, the Olympic Committees, and many other avenues.  For leagues with salaries, projecting an expected return on the investment can assist in contract negotiations and cater expectations.
 
 ## 3. Dataset
 
-To compare performance and injury, a minimum of two datasets will be needed. The first is a dataset of injuries for players [2]. This dataset will create the samples necessary for review.
+To compare performance and injury, a minimum of two datasets will be needed. The first is a dataset of injuries for players [^2]. This dataset will create the samples necessary for review.
 
-Once the controls for injuries are established, the next requirement will be to establish  pre-injury performance parameters and post-injury parameters.  These areas will be where the feature engineering will take place.  The datasets needed must dive into appropriate basketball performance stats to establish a metric to encompass a player’s performance. One example that ESPN has tried in the past is the Player Efficiency Rating (PER).  To accomplish this, it will be important to review player performance within games such as in the “NBA games data” [3] dataset.  There is a potential to pull more data from other datasets such as the “NBA Enhanced Box Score and Standings (2012 - 2018)” [4].  It is important to use the in depth data from the “NBA games data” [2] dataset because of how it will allow us to see how the player was performing throughout the season, and not just their average stats across the year.  With in depth information about each game of the season, and not just the teams and players aggregated stats, added to the data provided from the injury dataset [2] we will be able to compose new metrics to understand how these injuries are actually affecting the players performance.  
+Once the controls for injuries are established, the next requirement will be to establish  pre-injury performance parameters and post-injury parameters.  These areas will be where the feature engineering will take place.  The datasets needed must dive into appropriate basketball performance stats to establish a metric to encompass a player’s performance. One example that ESPN has tried in the past is the Player Efficiency Rating (PER).  To accomplish this, it will be important to review player performance within games such as in the “NBA games data” [^3] dataset.  There is a potential to pull more data from other datasets such as the “NBA Enhanced Box Score and Standings (2012 - 2018)” [^4].  It is important to use the in depth data from the “NBA games data” [^2] dataset because of how it will allow us to see how the player was performing throughout the season, and not just their average stats across the year.  With in depth information about each game of the season, and not just the teams and players aggregated stats, added to the data provided from the injury dataset [^2] we will be able to compose new metrics to understand how these injuries are actually affecting the players performance.  
 
 Along the way we look forward to discovering if there is also a causal relationship to the severity of some of the injuries, based on how the player was performing just before the injury.  The term “load management” has become popular in recent years to describe players taking rest periodically throughout the season in order to prevent injury from overplaying.  This new practice has received both support for the player safety it provides and also criticism around players taking too much time off.  Of course not all injuries are entirely based on the recent strain under the players body, but a better understanding about how that affects the injury as a whole could give better insight into avoiding more injuries.  It is important to remember though that any pattern identification would not lead to an elimination of all injuries, any contact sport will continue to have injuries, especially one as high impact as the NBA.  There is value to learn from why some players are able to return from certain injuries more quickly and why some return to almost equivalent or better playing performance than before the injury.  This comparison of performance will be made by deriving metrics based on varying ranges of games immediately leading up to injury and then immediately after returning from injury.  In addition to that we will perform comparisons to the players known peak performance to better understand how the injury affected them.  Another factor it will be important to include is the length of time recovering from the injury. Different players take differing amounts of time off, sometimes even with similar injuries.  Something will be said about the player’s dedication to recovery and determination to remain at peak performance, even through injury, when looking at how severe their injury was, how much time was taken for recovery, and how they performed upon returning.
 
@@ -35,13 +35,13 @@ From this point, a test run will be used to gauge the validity and accuracy of t
 ## Sources
 
 
-1. A. Mehra, *Sports Medicine Market worth $7.2 billion by 2025*, Markets and Markets.
- https://www.marketsandmarkets.com/PressReleases/sports-medicine-devices.asp
+[^1]: A. Mehra, *Sports Medicine Market worth $7.2 billion by 2025*, Markets and Markets.
+ <https://www.marketsandmarkets.com/PressReleases/sports-medicine-devices.asp>
 
-2. R. Hopkins, *NBA Injuries from 2010-2020*, Kaggle. https://www.kaggle.com/ghopkins/nba-injuries-2010-2018
+[^2]: R. Hopkins, *NBA Injuries from 2010-2020*, Kaggle. <https://www.kaggle.com/ghopkins/nba-injuries-2010-2018>
 
-3. N. Lauga, *NBA games data*, Kaggle.  https://www.kaggle.com/nathanlauga/nba-games?select=games_details.csv
+[^3]: N. Lauga, *NBA games data*, Kaggle.  <https://www.kaggle.com/nathanlauga/nba-games?select=games_details.csv>
 
-4. P. Rossotti, *NBA Enhanced Box Score and Standings (2012 - 2018)*, Kaggle. https://www.kaggle.com/pablote/nba-enhanced-stats
+[^4]: P. Rossotti, *NBA Enhanced Box Score and Standings (2012 - 2018)*, Kaggle. <https://www.kaggle.com/pablote/nba-enhanced-stats>
 
 
