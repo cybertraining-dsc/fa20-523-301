@@ -82,6 +82,8 @@ From this point, a test run will be used to gauge the validity and accuracy of t
 
 To help with review of the data, conditioned data was used to save resources on Google Colab. By conditioning the data and saving the files as a .CSV, the team was able to create a streamlined process. Additionally, the team found benefit by uploading these files to Google Drive to quickly import data near real time. The files saved were the following:
 
+**Table 1:** Datasets imported
+
 | Dataframe     | Title |
 | :---        |    :----:  |
 | 1.   | df_Injury_stats      |
@@ -96,15 +98,23 @@ To help with review of the data, conditioned data was used to save resources on 
 
 Every time Google Colab loads data, it takes time and resources. The team was able to utilize the cross platform connectivity of the Google utilities. The team could then focus on building models as opposed to conditioning data every time the code was ran.
 
-#### 4.1.1 Logistics Regression
+#### 4.1.1 Evaluation Metrics
 
-The initial model that was used was a Logistic Regression model. This model produced results of *X*. These results
+The metrics chosen were designed to give results on  Mean Absolute Error (MAE), Root Mean Square Error (RMSE), and the Explained Variance (EV) Score. MAE is  a measure of errors between paired observations experiencing the same expression. RMSE is the standard deviation of the prediction errors for our dataset. EV is the relationship between the train data and the test data. By using these metrics, the team is capable of reviewing the data in a statistical manner.
 
-![Logistic Regressor](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/logistic-regression-example.jpg)
+#### 4.1.2 Gradient Boost Regression
 
-**Figure 1:** Logistic Regressor [^LogReg]
+The initial model that was used was a Gradient Boosting Regressor (GBR) model. This model produced the results shown in Table 2. An example of the 
 
-After running a Logistic Regression model, the decision was made to try multiple models to see what gives the best results. The team decided to use a Linear Regression model.
+![Gradient Boosting Regressor](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/gbr.jpg)
+
+**Figure 1:** Gradient Boosting Regressor [^GBReg]
+
+After running a GBR model, the decision was made to try multiple models to see what gives the best results. The team saw a loose relationship given the data in Table 2. 
+
+**Table 2:** GBR Results
+
+![GBR Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/gbr_results.PNG)
 
 #### 4.1.2 LightGBM Regression
 
@@ -142,8 +152,9 @@ This section will be addressed upon project completion.
  
  These results are consistent with the current scientific literature [^2] [^3].
 
-Initial Project Report - Gorius, Hemmerlein
-Predictive Model - breakdown undetermined at this time
+## 6.1 Future Work
+
+In the future, the models could be continued to be refined. Currently the results are not as accurate and finished as the team would desire. Feature Engineering is always an area where the models can improve.
 
 ## 7. Acknowledgements
 
@@ -181,7 +192,7 @@ For the effort developed, the team split tasks between each other to cover more 
 
 [^a]: P. Mandon, *What is LightGBM, How to implement it? How to fine tune the parameters?*, Medium. <https://medium.com/@pushkarmandot/https-medium-com-pushkarmandot-what-is-lightgbm-how-to-implement-it-how-to-fine-tune-the-parameters-60347819b7fc>
 
-[^LogReg]: Hello ACM, *A Short Introduction – Logistic Regression Algorithm*, Hello ACM. <https://helloacm.com/a-short-introduction-logistic-regression-algorithm>
+[^GBReg]: V. Aliyev, *A hands-on explanation of Gradient Boosting Regression*, Medium. <https://medium.com/@vagifaliyev/a-hands-on-explanation-of-gradient-boosting-regression-4cfe7cfdf9e>
 
 [^NeuNet]: The Data Scientist, *What deep learning is and isn’t*, The Data Scientist.  <https://thedatascientist.com/what-deep-learning-is-and-isnt>
 
