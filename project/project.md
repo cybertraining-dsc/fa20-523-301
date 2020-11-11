@@ -106,7 +106,7 @@ The metrics chosen were designed to give results on  Mean Absolute Error (MAE), 
 
 The initial model that was used was a Gradient Boosting Regressor (GBR) model. This model produced the results shown in Table 2. An example of the 
 
-![Gradient Boosting Regressor](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/gbr.jpg)
+![Gradient Boosting Regressor](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/gbr.png)
 
 **Figure 1:** Gradient Boosting Regressor [^GBReg]
 
