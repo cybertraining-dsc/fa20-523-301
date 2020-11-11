@@ -50,7 +50,7 @@ One of the more difficult tasks was transforming the Injury dataset into somethi
 Once created, the ‘df_Injury_length’ data frame was copied and built upon. Using ‘iterrows():’ loop again to filter down the games details data frame rows with the same PlayerId, over 60 calculated columns are created to produce the ‘df_Injury_stats’ data frame. The data frame includes performance statistics specifically from the game the player was injured and the game the player returned from that injury. In addition to this aggregate performance metrics were calculated based on the 5 games prior to the injury and the 5 games post returning from injury. At this time the season of when the injury occurred and when the player returned is also stored in the dataframe. This will allow comparisons between the ‘df_Injury_stats’ data frame and the ‘df_Season_stats’ data frame which contains the players average performance metrics for entire seasons. 
 
 
-![Average Minutes Played in First Five Games Upon Return over Injury Length in Days](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/avg_Minutes_Played_in_Post_5_per_injury_length.png)
+![Average Minutes Played in First Five Games Upon Return over Injury Length in Days](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/avg_min_played_post5.PNG)
 
 **Figure 1:** Average Minutes Played in First Five Games Upon Return over Injury Length in Days*
 
@@ -112,7 +112,7 @@ Another algorithm chosen was a Light Gradient Boost Machine (LightGBM) model. Li
 
 ![LightGBM Algorithm: Leafwise searching](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/lightGBM_regressor.png)
 
-**Figure 2:** LightGBM Algorithm: Leafwise searching [^LGBMReg]
+**Figure 2:** LightGBM Algorithm: Leafwise searching [^a]
 
 When running the model, we saw promising results.
 
@@ -181,11 +181,9 @@ For the effort developed, the team split tasks between each other to cover more 
 
 [^a]: P. Mandon, *What is LightGBM, How to implement it? How to fine tune the parameters?*, Medium. <https://medium.com/@pushkarmandot/https-medium-com-pushkarmandot-what-is-lightgbm-how-to-implement-it-how-to-fine-tune-the-parameters-60347819b7fc>
 
-[^LogReg]: TEXT MISSING <https://helloacm.com/a-short-introduction-logistic-regression-algorithm>
+[^LogReg]: Hello ACM, *A Short Introduction – Logistic Regression Algorithm*, Hello ACM. <https://helloacm.com/a-short-introduction-logistic-regression-algorithm>
 
-[^LGBMReg]: TEXT MISSING <https://medium.com/@pushkarmandot/https-medium-com-pushkarmandot-what-is-lightgbm-how-to-implement-it-how-to-fine-tune-the-parameters-60347819b7fc>
-
-[^NeuNet]: TEXT MISSING <https://thedatascientist.com/what-deep-learning-is-and-isnt>
+[^NeuNet]: The Data Scientist, *What deep learning is and isn’t*, The Data Scientist.  <https://thedatascientist.com/what-deep-learning-is-and-isnt>
 
 
 
