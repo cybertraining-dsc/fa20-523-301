@@ -50,7 +50,7 @@ One of the more difficult tasks was transforming the Injury dataset into somethi
 Once created, the ‘df_Injury_length’ data frame was copied and built upon.  Using ‘iterrows():’ loop again to filter down the games details data frame rows with the same PlayerId, over 60 calculated columns are created to produce the ‘df_Injury_stats’ data frame.  The data frame includes performance statistics specifically from the game the player was injured and the game the player returned from that injury.  In addition to this aggregate performance metrics were calculated based on the 5 games prior to the injury and the 5 games post returning from injury.  At this time the season of when the injury occurred and when the player returned is also stored in the dataframe. This will allow comparisons between the ‘df_Injury_stats’ data frame and the ‘df_Season_stats’ data frame which contains the players average performance metrics for entire seasons. 
 
 
-![Average Minutes Played in First Five Games Upon Return over Injury Length in Days](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/avg_Minutes_Played_in_Post_5_per_injury_length.PNG)
+![Average Minutes Played in First Five Games Upon Return over Injury Length in Days](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/avg_Minutes_Played_in_Post_5_per_injury_length.png)
 
 **Figure 1:** Average Minutes Played in First Five Games Upon Return over Injury Length in Days*
 
