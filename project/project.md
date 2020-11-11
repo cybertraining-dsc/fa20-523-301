@@ -168,10 +168,10 @@ For the effort developed, the team split tasks between each other to cover more 
  <https://www.marketsandmarkets.com/PressReleases/sports-medicine-devices.asp>
 
 [^2]: J. Harris, B. Erickson, B. Bach Jr, G. Abrams, G. Cvetanovich, B. Forsythe, F. McCormick, A. Gupta, B. Cole,
-*Return-to-Sport and Performance After Anterior Cruciate Ligament Reconstruction in National Basketball Association Players*, Sports Health. 2013 Nov;5(6):562-8. doi: 10.1177/1941738113495788. [Online serial]. Available: https://pubmed.ncbi.nlm.nih.gov/24427434/  [Accessed Oct. 24, 2020].
+*Return-to-Sport and Performance After Anterior Cruciate Ligament Reconstruction in National Basketball Association Players*, Sports Health. 2013 Nov;5(6):562-8. doi: 10.1177/1941738113495788. [Online serial]. Available: <https://pubmed.ncbi.nlm.nih.gov/24427434/>  [Accessed Oct. 24, 2020].
 
 [^3]: W. Kraemer, C. Denegar, and S. Flanagan, *Recovery From Injury in Sport: Considerations in the Transition From Medical Care to Performance Care*, Sports Health. 
-2009 Sep; 1(5): 392–395.[Online serial]. Available: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3445177/   [Accessed Oct. 24, 2020].
+2009 Sep; 1(5): 392–395.[Online serial]. Available: <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3445177/>   [Accessed Oct. 24, 2020].
 
 [^4]: R. Hopkins, *NBA Injuries from 2010-2020*, Kaggle. <https://www.kaggle.com/ghopkins/nba-injuries-2010-2018>
 
