@@ -108,7 +108,7 @@ The initial model that was used was a Gradient Boosting Regressor (GBR) model. T
 
 ![Gradient Boosting Regressor](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/gbr.png)
 
-**Figure 1:** Gradient Boosting Regressor [^GBReg]
+**Figure 5:** Gradient Boosting Regressor [^GBReg]
 
 After running a GBR model, the decision was made to try multiple models to see what gives the best results. The team saw a loose relationship given the data in Table 2. 
 
@@ -122,9 +122,13 @@ Another algorithm chosen was a Light Gradient Boost Machine (LightGBM) model. Li
 
 ![LightGBM Algorithm: Leafwise searching](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/lightGBM_regressor.png)
 
-**Figure 2:** LightGBM Algorithm: Leafwise searching [^a]
+**Figure 6:** LightGBM Algorithm: Leafwise searching [^a]
 
-When running the model, we saw promising results.
+When running the model Table 3 was generated. This table uses the same metrics as the GBR Results Table (Table 2). 
+
+**Table 3:** LightGBM Results
+
+![LightGBM Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/lgbm_results.PNG)
 
 #### 4.1.3 Keras Deep Learning Models
 
@@ -132,9 +136,13 @@ The final model attempted was a Deep Learning model. A few runs of different lay
 
 ![Neural Network](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/simple_neural_network_vs_deep_learning.jpg)
 
-**Figure 3:** Neural Network [^NeuNet]
+**Figure 7:** Neural Network [^NeuNet]
 
 When the team ran the Neural Networks, the data went through three layers. Each layer was built upon the previous similarly to the figure. This allowed for the team to capture information from the processing.
+
+**Table 4:** CNN Results
+
+![CNN Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/cnn_results.PNG)
 
 ## 5. Inference
 
