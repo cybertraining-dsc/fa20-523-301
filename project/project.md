@@ -50,7 +50,7 @@ One of the more difficult tasks was transforming the Injury dataset into somethi
 Once created, the ‘df_Injury_length’ data frame was copied and built upon. Using ‘iterrows():’ loop again to filter down the games details data frame rows with the same PlayerId, over 60 calculated columns are created to produce the ‘df_Injury_stats’ data frame. The data frame includes performance statistics specifically from the game the player was injured and the game the player returned from that injury. In addition to this aggregate performance metrics were calculated based on the 5 games prior to the injury and the 5 games post returning from injury. At this time the season of when the injury occurred and when the player returned is also stored in the dataframe. This will allow comparisons between the ‘df_Injury_stats’ data frame and the ‘df_Season_stats’ data frame which contains the players average performance metrics for entire seasons. 
 
 
-![Average Minutes Played in First Five Games Upon Return over Injury Length in Days](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/avg_min_played_post5.PNG)
+![Average Minutes Played in First Five Games Upon Return over Injury Length in Days](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/avg_min_played_post5.png)
 
 **Figure 1:** Average Minutes Played in First Five Games Upon Return over Injury Length in Days*
 
@@ -114,7 +114,7 @@ After running a GBR model, the decision was made to try multiple models to see w
 
 **Table 2:** GBR Results
 
-![GBR Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/gbr_results.PNG)
+![GBR Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/gbr_results.png)
 
 #### 4.1.2 LightGBM Regression
 
@@ -128,7 +128,7 @@ When running the model Table 3 was generated. This table uses the same metrics a
 
 **Table 3:** LightGBM Results
 
-![LightGBM Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/lgbm_results.PNG)
+![LightGBM Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/lgbm_results.png)
 
 #### 4.1.3 Keras Deep Learning Models
 
@@ -142,7 +142,7 @@ When the team ran the Neural Networks, the data went through three layers. Each 
 
 **Table 4:** CNN Results
 
-![CNN Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/cnn_results.PNG)
+![CNN Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/cnn_results.png)
 
 ## 5. Inference
 
