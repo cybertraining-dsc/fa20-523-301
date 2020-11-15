@@ -11,7 +11,7 @@
 
 ## Abstract
 
-Sports Medicine will be a $7.2 billion dollar industry by 2025. The NBA has a vested interest in predicting performance of players as they return from injury. The authors evaluated datasets available to the public within the 2010 decade to build machine and deep learning models to expect results. The team utilized Gradient Based Regressor, Light GBM, and Keras Deep Learning models. The results showed that the coefficient of determination for the deep learning model was approximately 98%. The team recommends future work to predicting individual player performance utilizing the Keras model.
+Sports Medicine will be a $7.2 billion dollar industry by 2025. The NBA has a vested interest in predicting performance of players as they return from injury. The authors evaluated datasets available to the public within the 2010 decade to build machine and deep learning models to expect results. The team utilized Gradient Based Regressor, Light GBM, and Keras Deep Learning models. The results showed that the coefficient of determination for the deep learning model was approximately 98.5%. The team recommends future work to predicting individual player performance utilizing the Keras model.
 
 Contents
 
@@ -137,36 +137,26 @@ When running the model **Table 3** was generated. This table uses the same metri
 
 #### 4.1.3 Keras Deep Learning Models
 
-The final model attempted was a Deep Learning model. A few runs of different layers and epochs were chosen. They can be seen in **Table 4**. 
-
-**Table 4:** Epochs and Batch Sizes Chosen
-
-| **Number** | **Epoch**     | **Batch Sizes** |
-| :---  |    :----:  |    :----:  | 
-| Awaiting Results   | Awaiting Results  |  Awaiting Results |
-| 1.   | 3   |  20 |
-| 2.   | 3   |  20 |
-| 3.   | 3   |  20 |
-| 4.   | 3   |  20 |
-| 5.   | 3   |  20 |
-| 6.   | 3   |  20 |
-| 7.   | 3   |  20 |
-| 8.   | 3   |  20 |
-| 9.   | 3   |  20 |
-
-The model was sequentially ran through the test layers to refine the model. When this is done, each predecessor layer acts as an input to the next layer's input for the model. The results can produce accurate results while using unsupervised learning. The visualization for this model can be seen in the following figure:
+The final model attempted was a Deep Learning model. A few runs of different layers and epochs were chosen. They can be seen in **Table 4** (shown later). The model was sequentially ran through the test layers to refine the model. When this is done, each predecessor layer acts as an input to the next layer's input for the model. The results can produce accurate results while using unsupervised learning. The visualization for this model can be seen in the following figure:
 
 ![Neural Network](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/simple_neural_network_vs_deep_learning.jpg)
 
 **Figure 7:** Neural Network [^NeuNet]
 
-When the team ran the Neural Networks, the data went through three layers. Each layer was built upon the previous similarly to the figure. This allowed for the team to capture information from the processing. **Table 5** shows the results for the deep learning model.
+When the team ran the Neural Networks, the data went through three layers. Each layer was built upon the previous similarly to the figure. This allowed for the team to capture information from the processing. **Table 4** shows the results for the deep learning model.
 
-**Table 5:** Deep Learning Results
+**Table 4:** Epochs and Batch Sizes Chosen
 
-![Deep Learning Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/cnn_results.png)
+| **Number** | **Regressor Epoch**     | **Regressor Batch Sizes** | **KFolds**  | **Model Epochs** |  **R2** |
+| :---  |    :----:  |    :----:  |   :----:  |  :----:  |    :----:  |      
+|*1.*   | *25*   |  *25* | *10* | *10* | *0.985* |
+| 2.   | 40   |  25 | 20 | 10 | 0.894 |
+| 3.   | 20   |  25 | 20 | 10 | 0.966 |
+| 4.   | 20 | 20 | 10 | 10 | 0.707 |
+| 5.   | 25   |  25 | 10 | 5 | 0.611 |
+| 6.   | 25 | 25 | 10 | 20 | 0.982 |
 
-The team has decided that the results for the Deep Learning are the most desirable. This model would be the one that the team would recommend based on the results from the metrics available.
+The team has decided that the results for the Deep Learning are the most desirable. This model would be the one that the team would recommend based on the results from the metrics available. The parameters the team recommends are italicized in *Line 1*.
 
 ## 5. Inference
 
