@@ -11,7 +11,7 @@
 
 ## Abstract
 
-Abstract to be added when content is finalized.
+Sports Medicine will be a $7.2 billion dollar industry by 2025. The NBA has a vested interest in predicting performance of players as they return from injury. The authors evaluated datasets available to the public within the 2010 decade to build machine and deep learning models to expect results. The team utilized Gradient Based Regressor, Light GBM, and Keras Deep Learning models. The results showed that the coefficient of determination for the deep learning model was approximately 98%. The team recommends future work to predicting individual player performance utilizing the Keras model.
 
 Contents
 
@@ -19,7 +19,7 @@ Contents
 
 {{% /pageinfo %}}
 
-**Keywords:** basketball, NBA, injury, performance, salary, rehabilitation, artificial intelligence, convolutional neural network, Logistic Regressor, LightGBM.
+**Keywords:** basketball, NBA, injury, performance, salary, rehabilitation, artificial intelligence, convolutional neural network, lightGBM, deep learning, gradient based regressor.
 
 ## 1. Introduction
 
@@ -61,34 +61,34 @@ A few interesting figures were generated within the Exploratory Data Analysis (E
 
 **Figure 2:** Frequency of Injuries by Average Minutes Played in Prior Five Games*
 
-.
+**Figure 3** shows the length of injury over number of injuries. By reviewing this data, it can be seen that most injuries occur fewer rather than more often. A player that is deemed injury prone will be a lot more likely to be cut from the team. This data makes sense.
 
 ![Injury Length in Days over Number of Injuries](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/injury_length.png)
 
 **Figure 3:** Injury Length in Days over Number of Injuries
 
-.
+Finally, **Figure 4** shows the injury length over average minutes played in the five games before injury. This graph attempts to show all of the previous games and the impacts to the players injury. The data looks evenly distributed, but the majority of plaers do not play close to 40 minutes per game. By looking at this data, it shows that minutes played does likely contribute to the injury severity.
 
-![Injury Length in Days over Avg Minutes Plaed in Prior 5 Games](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/injury_length_over_avg_min.png)
+![Injury Length in Days over Avg Minutes Played in Prior 5 Games](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/injury_length_over_avg_min.png)
 
-**Figure 4:** Injury Length in Days over Avg Minutes Plaed in Prior 5 Games
+**Figure 4:** Injury Length in Days over Avg Minutes Played in Prior 5 Games
 
 Finally, the team decided to use the z-score to normalize all of the data. By using the Z-score from the individual data in a column of df_Injury_stats, the team was able to limit variability of multiple metrics across the dataframe. A player's blocks and steals should be a miniscule amount compared to minutes or points of some players. The same can be said of steals, technical fouls, or any other statistic in the course of an NBA game. The Z-score, by nature of the metric from the mean, allows for much less variability across the columns. 
 
 ## 4. Methodology
 
-The objective of this project is to develop performance indicators for injured players returning to basketball in the NBA. It is unreasonable to expect a player to return to the same level of play post injury immediately upon starting back up after recovery. It often takes a player months if not years to return to the same level of play as pre-injury, especially considering the severity of the injuries. In order to successfully analyze this information from the datasets, a predictive model will need to be created using a large set of the data to train. 
+The objective of this project was to develop performance indicators for injured players returning to basketball in the NBA. It is unreasonable to expect a player to return to the same level of play post injury immediately upon starting back up after recovery. It often takes a player months if not years to return to the same level of play as pre-injury, especially considering the severity of the injuries. In order to successfully analyze this information from the datasets, a predictive model will need to be created using a large set of the data to train. 
 
 From this point, a test run will be used to gauge the validity and accuracy of the model compared to some of the data set aside. The model created will be able to provide feature importance to give a better understanding of which specific features are the most crucial when it comes to determining how bad the effects of an injury may or may not be on player performance. Feature engineering will be performed prior to training the model in order to improve the chances of higher accuracy from the predictions. This model could be used to keep an eye out for how a player's performance intensity and the engineered features could affect how long a player takes to recover from injury, if there are any warning signs prior to an injury, and even how well they perform when returning.
 
 ### 4.1 Development of Models
 
-To help with review of the data, conditioned data was used to save resources on Google Colab. By conditioning the data and saving the files as a .CSV, the team was able to create a streamlined process. Additionally, the team found benefit by uploading these files to Google Drive to quickly import data near real time. The files saved were the following:
+To help with review of the data, conditioned data was used to save resources on Google Colab. By conditioning the data and saving the files as a .CSV, the team was able to create a streamlined process. Additionally, the team found benefit by uploading these files to Google Drive to quickly import data near real time. After operating in this fashion for some time, the team was able to load the datasets into Github and utilize that feature. By loading the datasets up to Github, a url could be used to link the files directly to the files saved on Github without using a token like with Kaggle or Google Drive. The files saved were the following:
 
 **Table 1:** Datasets imported
 
-| Dataframe     | Title |
-| :---        |    :----:  |
+| **Dataframe**     | **Title** |
+| :---  |    :----:  |  
 | 1.   | df_Injury_stats      |
 | 2.   | df_Injury_length       |
 | 3.   | df_Season_stats       |
@@ -103,21 +103,23 @@ Every time Google Colab loads data, it takes time and resources. The team was ab
 
 #### 4.1.1 Evaluation Metrics
 
-The metrics chosen were designed to give results on  Mean Absolute Error (MAE), Root Mean Square Error (RMSE), and the Explained Variance (EV) Score. MAE is  a measure of errors between paired observations experiencing the same expression. RMSE is the standard deviation of the prediction errors for our dataset. EV is the relationship between the train data and the test data. By using these metrics, the team is capable of reviewing the data in a statistical manner.
+The metrics chosen were designed to give results on  Mean Absolute Error (MAE), Root Mean Square Error (RMSE), and the Explained Variance (EV) Score. MAE is a measure of errors between paired observations experiencing the same expression. RMSE is the standard deviation of the prediction errors for our dataset. EV is the relationship between the train data and the test data. By using these metrics, the team is capable of reviewing the data in a statistical manner.
 
 #### 4.1.2 Gradient Boost Regression
 
-The initial model that was used was a Gradient Boosting Regressor (GBR) model. This model produced the results shown in Table 2. An example of the 
+The initial model that was used was a Gradient Boosting Regressor (GBR) model. This model produced the results shown in Table 2. The GBR model builds in a stage-wise fashion; similarly to other boosting methods. GBR also generalizes the data and attempts to optimize the results utilizing a loss function. An example of the algorithm can be seen in **Figure 5**.
 
 ![Gradient Boosting Regressor](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/gbr.png)
 
 **Figure 5:** Gradient Boosting Regressor [^GBReg]
 
-After running a GBR model, the decision was made to try multiple models to see what gives the best results. The team saw a loose relationship given the data in Table 2. 
+ The team saw a relationship given the data. **Table 2** shows the results of that model. The results were promising given the speed and utility of a GBR model. The team reviewed the data multiple times after multiple stages of conditioning the data. 
 
 **Table 2:** GBR Results
 
 ![GBR Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/gbr_results.png)
+
+After running a GBR model, the decision was made to try multiple models to see what gives the best results. The team settled on LightGBM and a Deep Learning model utilizing Keras built on the TensorFlow platform. These results will be seen in *4.1.2* and *4.1.3*.
 
 #### 4.1.2 LightGBM Regression
 
@@ -127,7 +129,7 @@ Another algorithm chosen was a Light Gradient Boost Machine (LightGBM) model. Li
 
 **Figure 6:** LightGBM Algorithm: Leafwise searching [^a]
 
-When running the model Table 3 was generated. This table uses the same metrics as the GBR Results Table (Table 2). 
+When running the model **Table 3** was generated. This table uses the same metrics as the GBR Results Table (**Table 2**). After reviewing the results, the GBR model still appeared to be a viable avenue. The Keras model will be evaluated next to see most optimal model to use for repeatable fresults.
 
 **Table 3:** LightGBM Results
 
@@ -135,37 +137,54 @@ When running the model Table 3 was generated. This table uses the same metrics a
 
 #### 4.1.3 Keras Deep Learning Models
 
-The final model attempted was a Deep Learning model. A few runs of different layers and epochs were chosen. The models sequentially ran through the test layers to refine the model. When this is done, each predecessor layer acts as an input to the next layer's model. The results can produce accurate results while using unsupervised learning. The visualization for this model can be seen in the following figure:
+The final model attempted was a Deep Learning model. A few runs of different layers and epochs were chosen. They can be seen in **Table 4**. 
+
+**Table 4:** Epochs and Batch Sizes Chosen
+
+| **Number** | **Epoch**     | **Batch Sizes** |
+| :---  |    :----:  |    :----:  | 
+| Awaiting Results   | Awaiting Results  |  Awaiting Results |
+| 1.   | 3   |  20 |
+| 2.   | 3   |  20 |
+| 3.   | 3   |  20 |
+| 4.   | 3   |  20 |
+| 5.   | 3   |  20 |
+| 6.   | 3   |  20 |
+| 7.   | 3   |  20 |
+| 8.   | 3   |  20 |
+| 9.   | 3   |  20 |
+
+The model was sequentially ran through the test layers to refine the model. When this is done, each predecessor layer acts as an input to the next layer's input for the model. The results can produce accurate results while using unsupervised learning. The visualization for this model can be seen in the following figure:
 
 ![Neural Network](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/simple_neural_network_vs_deep_learning.jpg)
 
 **Figure 7:** Neural Network [^NeuNet]
 
-When the team ran the Neural Networks, the data went through three layers. Each layer was built upon the previous similarly to the figure. This allowed for the team to capture information from the processing.
+When the team ran the Neural Networks, the data went through three layers. Each layer was built upon the previous similarly to the figure. This allowed for the team to capture information from the processing. **Table 5** shows the results for the deep learning model.
 
-**Table 4:** CNN Results
+**Table 5:** Deep Learning Results
 
-![CNN Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/cnn_results.png)
+![Deep Learning Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/cnn_results.png)
+
+The team has decided that the results for the Deep Learning are the most desirable. This model would be the one that the team would recommend based on the results from the metrics available.
 
 ## 5. Inference
 
-With the data available, some conclusions can be made. Not all injuries are of the same severity. By treating an ACL tear in the same manner as a bruise, the team doctors would take terrible approaches to rehab. The severity of the injury is a part of the approach to therapy.
+With the data available, some conclusions can be made. Not all injuries are of the same severity. By treating an ACL tear in the same manner as a bruise, the team doctors would take terrible approaches to rehab. The severity of the injury is a part of the approach to therapy. This detail is nearly impossible to capture in the model.
 
-Another aspect to come to a conclusion is that not every player recovers in the same timetable as another. Genetics, diet, and mental health can all harm or reinforce the efforts from the medical staff. These areas are hard to capture in the data and cannot be appropriately reviewed. 
+Another aspect to come to a conclusion is that not every player recovers in the same timetable as another. Genetics, diet, effort, and mental health can all harm or reinforce the efforts from the medical staff. These areas are hard to capture in the data and cannot be appropriately reviewed with this model. 
 
 It is also difficult to indicate where a previous injury may have contributed to a current injury. The kinetic chain is a structure of the musculoskeletal system that moves the body using the muscles and bones. If one portion of the chain is compromised, the entire chain will need to be modified to continue movement. This modification can result in more injuries. The data cannot provide this information.
 
 ## 6. Conclusion
 
-This section will be addressed upon project completion.
+After reviewing the results, the team created a robust model to predict the performance of a player. The coefficient of determination for the deep learning model shows a strong relationship between our training and test sets. After conditioning the data, the results can be seen in **Table 2**, **Table 3**, and **Table 5**. The team had an objective to find this correlation and build it to the point where injury and performance can be modeled. The team was able to accomplish this goal
  
- After reviewing the results, performance does indeed appear to degrade over time. 
- 
- These results are consistent with the current scientific literature [^2] [^3].
+Additionally, these results are consistent with the current scientific literature [^2] [^3]. The biological community has been able to record these results for decades. By leveraging this effort, the scientific community could move to proactive as opposed to reactive injury controls. This data will also allow for proper contract negotiations to take place in the NBA. The negotiations are pivotal to ensuring that expectations are met in the future seasons; especially when injury occurs in the final year of a player's contract.
 
 ## 6.1 Future Work
 
-In the future, the models could be continued to be refined. Currently the results are not as accurate and finished as the team would desire. Feature Engineering is always an area where the models can improve.
+In the future, the models could be continued to be refined. Currently the results are to the original intentions of the team, but improvements can be made. Feature Engineering is always an area where the models can improve. The team would also like to develop a model to take the stats of a player in pre-injury and apply that to a post-injury set of metrics. Also, the team would like to move to where the same could be applied given the length of the injury to the player. Longer and more severe injury will lead to different future results.
 
 ## 7. Acknowledgements
 
@@ -186,8 +205,8 @@ For the effort developed, the team split tasks between each other to cover more 
 
 ## 8. References
 
-[^1]: A. Mehra, *Sports Medicine Market worth $7.2 billion by 2025*, Markets and Markets.
- <https://www.marketsandmarkets.com/PressReleases/sports-medicine-devices.asp>
+[^1]: A. Mehra, *Sports Medicine Market worth $7.2 billion by 2025*, [online] Markets and Markets.
+ <https://www.marketsandmarkets.com/PressReleases/sports-medicine-devices.asp> [Accessed Oct. 15, 2020].
 
 [^2]: J. Harris, B. Erickson, B. Bach Jr, G. Abrams, G. Cvetanovich, B. Forsythe, F. McCormick, A. Gupta, B. Cole,
 *Return-to-Sport and Performance After Anterior Cruciate Ligament Reconstruction in National Basketball Association Players*, Sports Health. 2013 Nov;5(6):562-8. doi: 10.1177/1941738113495788. [Online serial]. Available: <https://pubmed.ncbi.nlm.nih.gov/24427434> [Accessed Oct. 24, 2020].
@@ -195,17 +214,17 @@ For the effort developed, the team split tasks between each other to cover more 
 [^3]: W. Kraemer, C. Denegar, and S. Flanagan, *Recovery From Injury in Sport: Considerations in the Transition From Medical Care to Performance Care*, Sports Health. 
 2009 Sep; 1(5): 392–395.[Online serial]. Available: <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3445177>  [Accessed Oct. 24, 2020].
 
-[^4]: R. Hopkins, *NBA Injuries from 2010-2020*, Kaggle. <https://www.kaggle.com/ghopkins/nba-injuries-2010-2018>
+[^4]: R. Hopkins, *NBA Injuries from 2010-2020*, [online] Kaggle. <https://www.kaggle.com/ghopkins/nba-injuries-2010-2018> [Accessed Oct. 9, 2020].
 
-[^5]: N. Lauga, *NBA games data*, Kaggle. <https://www.kaggle.com/nathanlauga/nba-games?select=games_details.csv>
+[^5]: N. Lauga, *NBA games data*, [online] Kaggle. <https://www.kaggle.com/nathanlauga/nba-games?select=games_details.csv> [Accessed Oct. 9, 2020].
 
-[^6]: J. Cirtautas, *NBA Players*, Kaggle. <https://www.kaggle.com/justinas/nba-players-data>
+[^6]: J. Cirtautas, *NBA Players*, [online] Kaggle. <https://www.kaggle.com/justinas/nba-players-data> [Accessed Oct. 9, 2020].
 
-[^a]: P. Mandon, *What is LightGBM, How to implement it? How to fine tune the parameters?*, Medium. <https://medium.com/@pushkarmandot/https-medium-com-pushkarmandot-what-is-lightgbm-how-to-implement-it-how-to-fine-tune-the-parameters-60347819b7fc>
+[^a]: P. Mandon, *What is LightGBM, How to implement it? How to fine tune the parameters?*, [online] Medium. <https://medium.com/@pushkarmandot/https-medium-com-pushkarmandot-what-is-lightgbm-how-to-implement-it-how-to-fine-tune-the-parameters-60347819b7fc> [Accessed Nov., 9 2020].
 
-[^GBReg]: V. Aliyev, *A hands-on explanation of Gradient Boosting Regression*, Medium. <https://medium.com/@vagifaliyev/a-hands-on-explanation-of-gradient-boosting-regression-4cfe7cfdf9e>
+[^GBReg]: V. Aliyev, *A hands-on explanation of Gradient Boosting Regression*, [online] Medium. <https://medium.com/@vagifaliyev/a-hands-on-explanation-of-gradient-boosting-regression-4cfe7cfdf9e> [Accessed Nov., 9 2020].
 
-[^NeuNet]: The Data Scientist, *What deep learning is and isn’t*, The Data Scientist.  <https://thedatascientist.com/what-deep-learning-is-and-isnt>
+[^NeuNet]: The Data Scientist, *What deep learning is and isn’t*, [online] The Data Scientist.  <https://thedatascientist.com/what-deep-learning-is-and-isnt> [Accessed Nov., 9 2020].
 
 
 
