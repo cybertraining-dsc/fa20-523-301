@@ -79,7 +79,7 @@ A few interesting figures were generated within the Exploratory Data Analysis (E
 
 **Figure 5:** Injury Length in Days over Player Games Played that Season
 
-**Figures 6,7,8** attempt to demosntrate if any relationship exists visually between a players Injury length and their age, weight, or height.  For the most part **Figure 6** shows most severe injuries occurring to younger players, which could make sense considering they can perform more difficult moves or have more stamina than older players.  Some severe injuries still exist among the older players, this also makes sense considering their bodies have been under stress for many years and are more prone to injury. It should be noted that there are more players in the league that fall into the younger age bucket than the older ages. It is difficult to identify any pattern on **Figure 7**.  If anything the graph is somewhat normally shaped similar to the heights of players across the league. Suprisingly the injuries on **Figure 8** are clustered a bit towards the left, being the lighter players.  This could be explained through the fact that the lighter players are often more athletic and perform more strenuous moves than heavier players.  It is also somewhat surprising since the argument that heavier players are putting more strain on their bodies could be used as a reason why heavier players would have worse injuries.
+**Figures 6,7,8** attempt to demonstrate if any relationship exists visually between a player's injury length and their age, weight, or height.  For the most part **Figure 6** shows most severe injuries occurring to younger players, which could make sense considering they can perform more difficult moves or have more stamina than older players.  Some severe injuries still exist among the older players, this also makes sense considering their bodies have been under stress for many years and are more prone to injury. It should be noted that there are more players in the league that fall into the younger age bucket than the older ages. It is difficult to identify any pattern on **Figure 7**.  If anything the graph is somewhat normally shaped similar to the heights of players across the league. Suprisingly the injuries on **Figure 8** are clustered a bit towards the left, being the lighter players.  This could be explained through the fact that the lighter players are often more athletic and perform more strenuous moves than heavier players.  It is also somewhat surprising since the argument that heavier players are putting more strain on their bodies could be used as a reason why heavier players would have worse injuries. One possible explanation could be the musculature adding more of the dense body mass could add protection to weakened joints. More investigation would be needed to identify an exact reason.
 
 ![Injury Length in Days over Player Age that Season](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/injurylength_playerage.png)
 
@@ -94,13 +94,13 @@ A few interesting figures were generated within the Exploratory Data Analysis (E
 **Figure 8:** Injury Length in Days over Player Weight in Kilograms
 
 
-Finally, the team decided to use the z-score to normalize all of the data. By using the Z-score from the individual data in a column of df_Injury_stats, the team was able to limit variability of multiple metrics across the dataframe. A player's blocks and steals should be a miniscule amount compared to minutes or points of some players. The same can be said of steals, technical fouls, or any other statistic in the course of an NBA game. The Z-score, by nature of the metric from the mean, allows for much less variability across the columns. 
+Finally, the team decided to use the z-score to normalize all of the data. By using the Z-score from the individual data in a column of df_Injury_stats, the team was able to limit variability of multiple metrics across the dataframe. A player's blocks and steals should be a miniscule amount compared to minutes or points of some players. The same can be said of assists, technical fouls, or any other statistic in the course of an NBA game. The Z-score, by nature of the metric from the mean, allows for much less variability across the columns. 
 
 ## 4. Methodology
 
 The objective of this project was to develop performance indicators for injured players returning to basketball in the NBA. It is unreasonable to expect a player to return to the same level of play post injury immediately upon starting back up after recovery. It often takes a player months if not years to return to the same level of play as pre-injury, especially considering the severity of the injuries. In order to successfully analyze this information from the datasets, a predictive model will need to be created using a large set of the data to train. 
 
-From this point, a test run will be used to gauge the validity and accuracy of the model compared to some of the data set aside. The model created will be able to provide feature importance to give a better understanding of which specific features are the most crucial when it comes to determining how bad the effects of an injury may or may not be on player performance. Feature engineering will be performed prior to training the model in order to improve the chances of higher accuracy from the predictions. This model could be used to keep an eye out for how a player's performance intensity and the engineered features could affect how long a player takes to recover from injury, if there are any warning signs prior to an injury, and even how well they perform when returning.
+From this point, a test run was used to gauge the validity and accuracy of the model compared to some of the data set aside. The model created was able to provide feature importance to give a better understanding of which specific features are the most crucial when it comes to determining how bad the effects of an injury may or may not be on player performance. Feature engineering was performed prior to training the model in order to improve the chances of higher accuracy from the predictions. This model could be used to keep an eye out for how a player's performance intensity and the engineered features could affect how long a player takes to recover from injury, if there are any warning signs prior to an injury, and even how well they perform when returning.
 
 ### 4.1 Development of Models
 
@@ -177,7 +177,7 @@ When the team ran the Neural Networks, the data went through three layers. Each 
 | 5.   | 25   |  25 | 10 | 5 | 0.611 |
 | 6.   | 25 | 25 | 10 | 20 | 0.982 |
 
-The team has decided that the results for the Deep Learning are the most desirable. This model would be the one that the team would recommend based on the results from the metrics available. The parameters the team recommends are italicized in *Line 1*.
+The team has decided that the results for the Deep Learning are the most desirable. This model would be the one that the team would recommend based on the results from the metrics available. The parameters the team recommends are italicized in *Line 1* of **Table 4**.
 
 ## 5. Inference
 
@@ -189,9 +189,9 @@ It is also difficult to indicate where a previous injury may have contributed to
 
 ## 6. Conclusion
 
-After reviewing the results, the team created a robust model to predict the performance of a player after an injury. The coefficient of determination for the deep learning model shows a strong relationship between our training and test sets. After conditioning the data, the results can be seen in **Table 2**, **Table 3**, and **Table 5**. The team had an objective to find this correlation and build it to the point where injury and performance can be modeled. The team was able to accomplish this goal.
+After reviewing the results, the team created a robust model to predict the performance of a player after an injury. The coefficient of determination for the deep learning model shows a strong relationship between the training and test sets. After conditioning the data, the results can be seen in **Table 2**, **Table 3**, and **Table 5**. The team had an objective to find this correlation and build it to the point where injury and performance can be modeled. The team was able to accomplish this goal.
  
-Additionally, these results are consistent with the current scientific literature [^2] [^3]. The biological community has been able to record these results for decades. By leveraging this effort, the scientific community could move to proactive as opposed to reactive injury controls. This data will also allow for proper contract negotiations to take place in the NBA, considering potential proactive decisions to avoid injury may include less playing time. The negotiations are pivotal to ensuring that expectations are met in the future seasons; especially when injury occurs in the final year of a player's contract. Team's with an improved understanding of how players can or will return from injury have an opportunity to make the best of scenarios where other team's may be hesitant to sign an injured player.  These different opportunities for a team's front office could be the difference between a championship ring and missing the playoffs entirely.
+Additionally, these results are consistent with the current scientific literature [^2] [^3]. The biological community has been able to record these results for decades. By leveraging this effort, the scientific community could move to a more proactive approach as opposed to reactive with respect to injury controls. This data will also allow for proper contract negotiations to take place in the NBA, considering potential decisions to avoid injury may include less playing time. The negotiations are pivotal to ensuring that expectations are met in the future seasons; especially when injury occurs in the final year of a player's contract. Teams with an improved understanding of how players can or will return from injury have an opportunity to make the best of scenarios where other teams may be hesitant to sign an injured player.  These different opportunities for a team's front office could be the difference between a championship ring and missing the playoffs entirely.
 
 ## 6.1 Future Work
 
@@ -199,7 +199,7 @@ In the future, the models could be continued to be refined. Currently the result
 
 ## 7. Acknowledgements
 
-The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and the associate instructors in the *FA20-BL-ENGR-E534-11530: Big Data Applications* course (offered in the Fall 2020 semester at Indiana University, Bloomington) for their continued assistance and suggestions with regard to exploring this idea and also for their aid with preparing the various drafts of this article. In addition to that the community of students from the *FA20-BL-ENGR-E534-11530: Big Data Applications* course also deserve a thanks from the author for the support, continued engagement, and valuable discussions through Piazza.
+The authors would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and the associate instructors in the *FA20-BL-ENGR-E534-11530: Big Data Applications* course (offered in the Fall 2020 semester at Indiana University, Bloomington) for their continued assistance and suggestions with regard to exploring this idea and also for their aid with preparing the various drafts of this article. In addition to that the community of students from the *FA20-BL-ENGR-E534-11530: Big Data Applications* course also deserve a thanks from the author for the support, continued engagement, and valuable discussions through Piazza.
 
 ### 7.1 Work Breakdown
 
@@ -210,11 +210,11 @@ For the effort developed, the team split tasks between each other to cover more 
    * Feature Engineering
    * Keras Deep Learning Model
 2. Gavin Hemmerlein
-   * Organization of items
+   * Organization of Items
    * Model Development
 3. Both
    * Report
-   * All outstanding items
+   * All Outstanding Items
 
 ## 8. References
 
