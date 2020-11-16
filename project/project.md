@@ -67,11 +67,32 @@ A few interesting figures were generated within the Exploratory Data Analysis (E
 
 **Figure 3:** Injury Length in Days over Number of Injuries
 
-Finally, **Figure 4** shows the injury length over average minutes played in the five games before injury. This graph attempts to show all of the previous games and the impacts to the players injury. The data looks evenly distributed, but the majority of plaers do not play close to 40 minutes per game. By looking at this data, it shows that minutes played does likely contribute to the injury severity.
+**Figure 4** shows the injury length over average minutes played in the five games before injury. This graph attempts to show all of the previous games and the impacts to the players injury. The data looks evenly distributed, but the majority of plaers do not play close to 40 minutes per game. By looking at this data, it shows that minutes played does likely contribute to the injury severity.
 
 ![Injury Length in Days over Avg Minutes Played in Prior 5 Games](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/injury_length_over_avg_min.png)
 
 **Figure 4:** Injury Length in Days over Avg Minutes Played in Prior 5 Games
+
+**Figure 5** shows that in general the number of games played does not have a significant relationship to the length of the injury.  There is a darker cluster between 500-1000 days injured that exists over the 40-82 games played, this could suggest that as more games are played there is likeliness for more severe injury.
+
+![Injury Length in Days over Player Games Played that Season](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/injurylength_gamesplayed.png)
+
+**Figure 5:** Injury Length in Days over Player Games Played that Season
+
+**Figures 6,7,8** attempt to demosntrate if any relationship exists visually between a players Injury length and their age, weight, or height.  For the most part **Figure 6** shows most severe injuries occurring to younger players, which could make sense considering they can perform more difficult moves or have more stamina than older players.  Some severe injuries still exist among the older players, also makes sense considering their bodies have been under stress for may years and are more prone to injury. It should be noted that there are more players in the league that fall into the younger age bucket than the older ages. It is difficult to identify any pattern on **Figure 7**.  If anything the graph is somewhat normally shaped similar to the heights of players across the league. Suprisingly the injuries on **Figure 8** are clustered a bit towards the left, being the lighter players.  This could be explained through the fact that the lighter players are often more athletic and perform more strenous moves than heavier players.  It is also somewhat surprising since the argument that heavier players are putting more strain on their bodies could be used as a reason why heavier players would have worse injuries.
+
+![Injury Length in Days over Player Age that Season](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/injurylength_playerage.png)
+
+**Figure 6:** Injury Length in Days over Player Age that Season
+
+![Injury Length in Days over Player Height in Inches](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/injurylength_playerHeight.png)
+
+**Figure 7:** Injury Length in Days over Player Height in Inches
+
+![Injury Length in Days over Player Weight in Kilograms](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/injurylength_playerWeight.png)
+
+**Figure 8:** Injury Length in Days over Player Weight in Kilograms
+
 
 Finally, the team decided to use the z-score to normalize all of the data. By using the Z-score from the individual data in a column of df_Injury_stats, the team was able to limit variability of multiple metrics across the dataframe. A player's blocks and steals should be a miniscule amount compared to minutes or points of some players. The same can be said of steals, technical fouls, or any other statistic in the course of an NBA game. The Z-score, by nature of the metric from the mean, allows for much less variability across the columns. 
 
