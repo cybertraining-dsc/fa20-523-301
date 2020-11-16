@@ -164,21 +164,21 @@ With the data available, some conclusions can be made. Not all injuries are of t
 
 Another aspect to come to a conclusion is that not every player recovers in the same timetable as another. Genetics, diet, effort, and mental health can all harm or reinforce the efforts from the medical staff. These areas are hard to capture in the data and cannot be appropriately reviewed with this model. 
 
-It is also difficult to indicate where a previous injury may have contributed to a current injury. The kinetic chain is a structure of the musculoskeletal system that moves the body using the muscles and bones. If one portion of the chain is compromised, the entire chain will need to be modified to continue movement. This modification can result in more injuries. The data cannot provide this information.
+It is also difficult to indicate where a previous injury may have contributed to a current injury. The kinetic chain is a structure of the musculoskeletal system that moves the body using the muscles and bones. If one portion of the chain is compromised, the entire chain will need to be modified to continue movement. This modification can result in more injuries. The data cannot provide this information.  It is important to remember these possible confounding variables when interpreting the results of the model.
 
 ## 6. Conclusion
 
-After reviewing the results, the team created a robust model to predict the performance of a player. The coefficient of determination for the deep learning model shows a strong relationship between our training and test sets. After conditioning the data, the results can be seen in **Table 2**, **Table 3**, and **Table 5**. The team had an objective to find this correlation and build it to the point where injury and performance can be modeled. The team was able to accomplish this goal
+After reviewing the results, the team created a robust model to predict the performance of a player after an injury. The coefficient of determination for the deep learning model shows a strong relationship between our training and test sets. After conditioning the data, the results can be seen in **Table 2**, **Table 3**, and **Table 5**. The team had an objective to find this correlation and build it to the point where injury and performance can be modeled. The team was able to accomplish this goal.
  
-Additionally, these results are consistent with the current scientific literature [^2] [^3]. The biological community has been able to record these results for decades. By leveraging this effort, the scientific community could move to proactive as opposed to reactive injury controls. This data will also allow for proper contract negotiations to take place in the NBA. The negotiations are pivotal to ensuring that expectations are met in the future seasons; especially when injury occurs in the final year of a player's contract.
+Additionally, these results are consistent with the current scientific literature [^2] [^3]. The biological community has been able to record these results for decades. By leveraging this effort, the scientific community could move to proactive as opposed to reactive injury controls. This data will also allow for proper contract negotiations to take place in the NBA, considering potential proactive decisions to avoid injury may include less playing time. The negotiations are pivotal to ensuring that expectations are met in the future seasons; especially when injury occurs in the final year of a player's contract. Team's with an improved understanding of how players can or will return from injury have an opportunity to make the best of scenarios where other team's may be hesitant to sign an injured player.  These different opportunities for a team's front office could be the difference between a championship ring and missing the playoffs entirely.
 
 ## 6.1 Future Work
 
-In the future, the models could be continued to be refined. Currently the results are to the original intentions of the team, but improvements can be made. Feature Engineering is always an area where the models can improve. The team would also like to develop a model to take the stats of a player in pre-injury and apply that to a post-injury set of metrics. Also, the team would like to move to where the same could be applied given the length of the injury to the player. Longer and more severe injury will lead to different future results.
+In the future, the models could be continued to be refined. Currently the results are to the original intentions of the team, but improvements can be made. Feature Engineering is always an area where the models can improve. Some valuable features to be created in the future are the calculations for the player's efficiency overall, as well as offensinve and defensive efficiencies in each game. The team would also like to develop a model to use the stats of a player in pre-injury and apply that to the post-injury set of metrics. Also, the team would like to move to where the same could be applied given the length of the injury to the player while considering the severity of the injury. Longer and more severe injury will lead to different future results than say a long not severe injury, or a short injury that was somewhat severe.  The number of varaibles that could provide more valuable information to the model are endless.
 
 ## 7. Acknowledgements
 
-The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and the associate instructors in the *FA20-BL-ENGR-E534-11530: Big Data Applications* course (offered in the Fall 2020 semester at Indiana University, Bloomington) for their continued assistance and suggestions with regard to exploring this idea and also for their aid with preparing the various drafts of this article.
+The author would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and the associate instructors in the *FA20-BL-ENGR-E534-11530: Big Data Applications* course (offered in the Fall 2020 semester at Indiana University, Bloomington) for their continued assistance and suggestions with regard to exploring this idea and also for their aid with preparing the various drafts of this article. In addition to that the community of students from the *FA20-BL-ENGR-E534-11530: Big Data Applications* course also deserve a thanks from the author for the support, continued engagement, and valuable discussions through Piazza.
 
 ### 7.1 Work Breakdown
 
@@ -187,10 +187,12 @@ For the effort developed, the team split tasks between each other to cover more 
 1. Chelsea Gorius
    * Exploratory Data Analysis
    * Feature Engineering
+   * Keras Deep Learning Model
 2. Gavin Hemmerlein
    * Organization of items
    * Model Development
 3. Both
+   * Report
    * All outstanding items
 
 ## 8. References
