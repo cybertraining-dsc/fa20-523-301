@@ -5,7 +5,7 @@
 
 * Gavin Hemmerlein, fa20-523-301 
 * Chelsea Gorius, fa20-523-344
-* [Edit](https://github.com/cybertraining-dsc/fa20-523-301/blob/master/project/project.md)
+* [Edit](https://github.com/cybertraining-dsc/fa20-523-301/blob/main/project/project.md)
 
 {{% pageinfo %}}
 
@@ -51,45 +51,45 @@ Once created, the ‘df_Injury_length’ data frame was copied and built upon. U
 
 A few interesting figures were generated within the Exploratory Data Analysis (EDA) stage. **Figure 1** gave a view of the load of the player returning from injury. The load to the player will show how recovered the player is upon completion of rehab. Many teams decide to slowly work a returning player in. Additionally, the amount of time for an injury can be seen on this graph. The longer the injury, the more unlikely the player will return to action.
 
-![Average Minutes Played in First Five Games Upon Return over Injury Length in Days](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/avg_min_played_post5.png)
+![Average Minutes Played in First Five Games Upon Return over Injury Length in Days](https://github.com/cybertraining-dsc/fa20-523-301/raw/main/project/images/avg_min_played_post5.png)
 
 **Figure 1:** Average Minutes Played in First Five Games Upon Return over Injury Length in Days*
 
 **Figure 2** shows the frequency in which a player is injured. The idea behind this graph is to see a relationship between the time leading up to the injury. Interesting enough, there is no key indication of where injury is more likely to occur. It can be assumed that there is a rarity of players who see playing time greater than 30 minutes. The histogram only shows a near flat relationship; which was surprising.
 
-![Frequency of Injuries by Average Minutes Played in Prior Five Games](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/frequencies_by_average_minutes.png)
+![Frequency of Injuries by Average Minutes Played in Prior Five Games](https://github.com/cybertraining-dsc/fa20-523-301/raw/main/project/images/frequencies_by_average_minutes.png)
 
 **Figure 2:** Frequency of Injuries by Average Minutes Played in Prior Five Games*
 
 **Figure 3** shows the length of injury over number of injuries. By reviewing this data, it can be seen that most injuries occur fewer rather than more often. A player that is deemed injury prone will be a lot more likely to be cut from the team. This data makes sense.
 
-![Injury Length in Days over Number of Injuries](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/injury_length.png)
+![Injury Length in Days over Number of Injuries](https://github.com/cybertraining-dsc/fa20-523-301/raw/main/project/images/injury_length.png)
 
 **Figure 3:** Injury Length in Days over Number of Injuries
 
 **Figure 4** shows the injury length over average minutes played in the five games before injury. This graph attempts to show all of the previous games and the impacts to the players injury. The data looks evenly distributed, but the majority of plaers do not play close to 40 minutes per game. By looking at this data, it shows that minutes played does likely contribute to the injury severity.
 
-![Injury Length in Days over Avg Minutes Played in Prior 5 Games](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/injury_length_over_avg_min.png)
+![Injury Length in Days over Avg Minutes Played in Prior 5 Games](https://github.com/cybertraining-dsc/fa20-523-301/raw/main/project/images/injury_length_over_avg_min.png)
 
 **Figure 4:** Injury Length in Days over Avg Minutes Played in Prior 5 Games
 
 **Figure 5** shows that in general the number of games played does not have a significant relationship to the length of the injury.  There is a darker cluster between 500-1000 days injured that exists over the 40-82 games played, this could suggest that as more games are played there is likeliness for more severe injury.
 
-![Injury Length in Days over Player Games Played that Season](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/injurylength_gamesplayed.png)
+![Injury Length in Days over Player Games Played that Season](https://github.com/cybertraining-dsc/fa20-523-301/raw/main/project/images/injurylength_gamesplayed.png)
 
 **Figure 5:** Injury Length in Days over Player Games Played that Season
 
 **Figures 6,7,8** attempt to demonstrate if any relationship exists visually between a player's injury length and their age, weight, or height.  For the most part **Figure 6** shows most severe injuries occurring to younger players, which could make sense considering they can perform more difficult moves or have more stamina than older players.  Some severe injuries still exist among the older players, this also makes sense considering their bodies have been under stress for many years and are more prone to injury. It should be noted that there are more players in the league that fall into the younger age bucket than the older ages. It is difficult to identify any pattern on **Figure 7**.  If anything the graph is somewhat normally shaped similar to the heights of players across the league. Suprisingly the injuries on **Figure 8** are clustered a bit towards the left, being the lighter players.  This could be explained through the fact that the lighter players are often more athletic and perform more strenuous moves than heavier players.  It is also somewhat surprising since the argument that heavier players are putting more strain on their bodies could be used as a reason why heavier players would have worse injuries. One possible explanation could be the musculature adding more of the dense body mass could add protection to weakened joints. More investigation would be needed to identify an exact reason.
 
-![Injury Length in Days over Player Age that Season](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/injurylength_playerage.png)
+![Injury Length in Days over Player Age that Season](https://github.com/cybertraining-dsc/fa20-523-301/raw/main/project/images/injurylength_playerage.png)
 
 **Figure 6:** Injury Length in Days over Player Age that Season
 
-![Injury Length in Days over Player Height in Inches](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/injurylength_playerHeight.png)
+![Injury Length in Days over Player Height in Inches](https://github.com/cybertraining-dsc/fa20-523-301/raw/main/project/images/injurylength_playerHeight.png)
 
 **Figure 7:** Injury Length in Days over Player Height in Inches
 
-![Injury Length in Days over Player Weight in Kilograms](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/injurylength_playerWeight.png)
+![Injury Length in Days over Player Weight in Kilograms](https://github.com/cybertraining-dsc/fa20-523-301/raw/main/project/images/injurylength_playerWeight.png)
 
 **Figure 8:** Injury Length in Days over Player Weight in Kilograms
 
@@ -130,7 +130,7 @@ The metrics chosen were designed to give results on  Mean Absolute Error (MAE), 
 
 The initial model that was used was a Gradient Boosting Regressor (GBR) model. This model produced the results shown in Table 2. The GBR model builds in a stage-wise fashion; similarly to other boosting methods. GBR also generalizes the data and attempts to optimize the results utilizing a loss function. An example of the algorithm can be seen in **Figure 5**.
 
-![Gradient Boosting Regressor](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/gbr.png)
+![Gradient Boosting Regressor](https://github.com/cybertraining-dsc/fa20-523-301/raw/main/project/images/gbr.png)
 
 **Figure 5:** Gradient Boosting Regressor [^GBReg]
 
@@ -138,7 +138,7 @@ The initial model that was used was a Gradient Boosting Regressor (GBR) model. T
 
 **Table 2:** GBR Results
 
-![GBR Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/gbr_results.png)
+![GBR Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/main/project/images/gbr_results.png)
 
 After running a GBR model, the decision was made to try multiple models to see what gives the best results. The team settled on LightGBM and a Deep Learning model utilizing Keras built on the TensorFlow platform. These results will be seen in *4.1.2* and *4.1.3*.
 
@@ -146,7 +146,7 @@ After running a GBR model, the decision was made to try multiple models to see w
 
 Another algorithm chosen was a Light Gradient Boost Machine (LightGBM) model. LightGBM is known for its lightweight and resource sparse abilities. The model is built from decision tree algorithms and used for ranking, classification, and other machine learning tasks. By choosing LightGBM data scientists are able to analyze larger data a faster approach. LightGBM can often over fit a model if the data is too small, but fortunately for the purpose of this assignment the data available for NBA injuries and stats is extremely large. Availability of data allowed for smooth operation of the LightGBM model. Mandot explains the model really well in The Medium. Mandot said, *"Light GBM can handle the large size of data and takes lower memory to run. Another reason of why Light GBM is popular is because it focuses on accuracy of results. LGBM also supports GPU learning and thus data scientists are widely using LGBM for data science application development"* [^a]. There are a lot of benefits available to this algorithm.
 
-![LightGBM Algorithm: Leafwise searching](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/lightGBM_regressor.png)
+![LightGBM Algorithm: Leafwise searching](https://github.com/cybertraining-dsc/fa20-523-301/raw/main/project/images/lightGBM_regressor.png)
 
 **Figure 6:** LightGBM Algorithm: Leafwise searching [^a]
 
@@ -154,13 +154,13 @@ When running the model **Table 3** was generated. This table uses the same metri
 
 **Table 3:** LightGBM Results
 
-![LightGBM Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/lgbm_results.png)
+![LightGBM Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/main/project/images/lgbm_results.png)
 
 #### 4.1.3 Keras Deep Learning Models
 
 The final model attempted was a Deep Learning model. A few runs of different layers and epochs were chosen. They can be seen in **Table 4** (shown later). The model was sequentially ran through the test layers to refine the model. When this is done, each predecessor layer acts as an input to the next layer's input for the model. The results can produce accurate results while using unsupervised learning. The visualization for this model can be seen in the following figure:
 
-![Neural Network](https://github.com/cybertraining-dsc/fa20-523-301/raw/master/project/images/simple_neural_network_vs_deep_learning.jpg)
+![Neural Network](https://github.com/cybertraining-dsc/fa20-523-301/raw/main/project/images/simple_neural_network_vs_deep_learning.jpg)
 
 **Figure 7:** Neural Network [^NeuNet]
 
