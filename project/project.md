@@ -80,7 +80,7 @@ A few interesting figures were generated within the Exploratory Data Analysis (E
 
 **Figure 5:** Injury Length in Days over Player Games Played that Season
 
-**Figures 6,7,8** attempt to demonstrate if any relationship exists visually between a player's injury length and their age, weight, or height.  For the most part **Figure 6** shows most severe injuries occurring to younger players, which could make sense considering they can perform more difficult moves or have more stamina than older players.  Some severe injuries still exist among the older players, this also makes sense considering their bodies have been under stress for many years and are more prone to injury. It should be noted that there are more players in the league that fall into the younger age bucket than the older ages. It is difficult to identify any pattern on **Figure 7**.  If anything the graph is somewhat normally shaped similar to the heights of players across the league. Suprisingly the injuries on **Figure 8** are clustered a bit towards the left, being the lighter players.  This could be explained through the fact that the lighter players are often more athletic and perform more strenuous moves than heavier players.  It is also somewhat surprising since the argument that heavier players are putting more strain on their bodies could be used as a reason why heavier players would have worse injuries. One possible explanation could be the musculature adding more of the dense body mass could add protection to weakened joints. More investigation would be needed to identify an exact reason.
+**Figures 6**, **Figure 7**, and **Figure 8** attempt to demonstrate if any relationship exists visually between a player's injury length and their age, weight, or height.  For the most part **Figure 6** shows most severe injuries occurring to younger players, which could make sense considering they can perform more difficult moves or have more stamina than older players.  Some severe injuries still exist among the older players, this also makes sense considering their bodies have been under stress for many years and are more prone to injury. It should be noted that there are more players in the league that fall into the younger age bucket than the older ages. It is difficult to identify any pattern on **Figure 7**.  If anything the graph is somewhat normally shaped similar to the heights of players across the league. Suprisingly the injuries on **Figure 8** are clustered a bit towards the left, being the lighter players.  This could be explained through the fact that the lighter players are often more athletic and perform more strenuous moves than heavier players.  It is also somewhat surprising since the argument that heavier players are putting more strain on their bodies could be used as a reason why heavier players would have worse injuries. One possible explanation could be the musculature adding more of the dense body mass could add protection to weakened joints. More investigation would be needed to identify an exact reason.
 
 ![Injury Length in Days over Player Age that Season](https://github.com/cybertraining-dsc/fa20-523-301/raw/main/project/images/injurylength_playerage.png)
 
@@ -94,7 +94,6 @@ A few interesting figures were generated within the Exploratory Data Analysis (E
 
 **Figure 8:** Injury Length in Days over Player Weight in Kilograms
 
-
 Finally, the team decided to use the z-score to normalize all of the data. By using the Z-score from the individual data in a column of df_Injury_stats, the team was able to limit variability of multiple metrics across the dataframe. A player's blocks and steals should be a miniscule amount compared to minutes or points of some players. The same can be said of assists, technical fouls, or any other statistic in the course of an NBA game. The Z-score, by nature of the metric from the mean, allows for much less variability across the columns. 
 
 ## 4. Methodology
@@ -107,7 +106,7 @@ From this point, a test run was used to gauge the validity and accuracy of the m
 
 To help with review of the data, conditioned data was used to save resources on Google Colab. By conditioning the data and saving the files as a .CSV, the team was able to create a streamlined process. Additionally, the team found benefit by uploading these files to Google Drive to quickly import data near real time. After operating in this fashion for some time, the team was able to load the datasets into Github and utilize that feature. By loading the datasets up to Github, a url could be used to link the files directly to the files saved on Github without using a token like with Kaggle or Google Drive. The files saved were the following:
 
-**Table 1:** Datasets imported
+**Table 1:** Datasets Imported
 
 | **Dataframe**     | **Title** |
 | :---  |    :----:  |  
@@ -139,7 +138,14 @@ The initial model that was used was a Gradient Boosting Regressor (GBR) model. T
 
 **Table 2:** GBR Results
 
-![GBR Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/main/project/images/gbr_results.png)
+| **Category**     | **Value** |
+| :---  |    :----:  |  
+| MAE Mean   | -10.787      |
+| MAE STD   | 0.687      |
+| RMSE Mean   |    -115.929     |
+| RMSE STD  |    96.64     |
+| EV Mean   |   1.0      |
+| EV STD  |  0.0       |
 
 After running a GBR model, the decision was made to try multiple models to see what gives the best results. The team settled on LightGBM and a Deep Learning model utilizing Keras built on the TensorFlow platform. These results will be seen in *4.1.2* and *4.1.3*.
 
@@ -155,7 +161,14 @@ When running the model **Table 3** was generated. This table uses the same metri
 
 **Table 3:** LightGBM Results
 
-![LightGBM Results](https://github.com/cybertraining-dsc/fa20-523-301/raw/main/project/images/lgbm_results.png)
+| **Category**     | **Value** |
+| :---  |    :----:  |  
+| MAE Mean   | -0.011      |
+| MAE STD   | 0.001      |
+| RMSE Mean   |    -0.128     |
+| RMSE STD  |    0.046     |
+| EV Mean   |   0.982      |
+| EV STD  |  0.013       |
 
 #### 4.1.3 Keras Deep Learning Models
 
@@ -194,9 +207,9 @@ After reviewing the results, the team created a robust model to predict the perf
  
 Additionally, these results are consistent with the current scientific literature [^2] [^3]. The biological community has been able to record these results for decades. By leveraging this effort, the scientific community could move to a more proactive approach as opposed to reactive with respect to injury controls. This data will also allow for proper contract negotiations to take place in the NBA, considering potential decisions to avoid injury may include less playing time. The negotiations are pivotal to ensuring that expectations are met in the future seasons; especially when injury occurs in the final year of a player's contract. Teams with an improved understanding of how players can or will return from injury have an opportunity to make the best of scenarios where other teams may be hesitant to sign an injured player.  These different opportunities for a team's front office could be the difference between a championship ring and missing the playoffs entirely.
 
-## 6.1 Future Work
+## 6.1 Limitations
 
-In the future, the models could be continued to be refined. Currently the results are to the original intentions of the team, but improvements can be made. Feature Engineering is always an area where the models can improve. Some valuable features to be created in the future are the calculations for the player's efficiency overall, as well as offensinve and defensive efficiencies in each game. The team would also like to develop a model to use the stats of a player in pre-injury and apply that to the post-injury set of metrics. Also, the team would like to move to where the same could be applied given the length of the injury to the player while considering the severity of the injury. Longer and more severe injury will lead to different future results than say a long not severe injury, or a short injury that was somewhat severe.  The number of varaibles that could provide more valuable information to the model are endless.
+With respect to the current work, the models could be continued to be refined. Currently the results are to the original intentions of the team, but improvements can be made. Feature Engineering is always an area where the models can improve. Some valuable features to be created in the future are the calculations for the player's efficiency overall, as well as offensinve and defensive efficiencies in each game. The team would also like to develop a model to use the stats of a player in pre-injury and apply that to the post-injury set of metrics. Also, the team would like to move to where the same could be applied given the length of the injury to the player while considering the severity of the injury. Longer and more severe injury will lead to different future results than say a long not severe injury, or a short injury that was somewhat severe.  The number of varaibles that could provide more valuable information to the model are endless.
 
 ## 7. Acknowledgements
 
