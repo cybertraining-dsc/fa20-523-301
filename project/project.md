@@ -2,7 +2,7 @@
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-301/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-301/actions)
 [![Status](https://github.com/cybertraining-dsc/fa20-523-301/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-301/actions)
-Status: in progress
+Status: final
 
 * Gavin Hemmerlein, fa20-523-301 
 * Chelsea Gorius, fa20-523-344
