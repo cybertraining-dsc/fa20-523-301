@@ -109,7 +109,7 @@ To help with review of the data, conditioned data was used to save resources on 
 **Table 1:** Datasets Imported
 
 | **Dataframe**     | **Title** |
-| :---  |    :----:  |  
+| :---  |    :----:  |
 | 1.   | df_Injury_stats      |
 | 2.   | df_Injury_length       |
 | 3.   | df_Season_stats       |
@@ -139,7 +139,7 @@ The initial model that was used was a Gradient Boosting Regressor (GBR) model. T
 **Table 2:** GBR Results
 
 | **Category**     | **Value** |
-| :---  |    :----:  |  
+| :---  |    :----:  |
 | MAE Mean   | -10.787      |
 | MAE STD   | 0.687      |
 | RMSE Mean   |    -115.929     |
@@ -162,7 +162,7 @@ When running the model **Table 3** was generated. This table uses the same metri
 **Table 3:** LightGBM Results
 
 | **Category**     | **Value** |
-| :---  |    :----:  |  
+| :---  |    :----:  |
 | MAE Mean   | -0.011      |
 | MAE STD   | 0.001      |
 | RMSE Mean   |    -0.128     |
@@ -183,7 +183,7 @@ When the team ran the Neural Networks, the data went through three layers. Each 
 **Table 4:** Epochs and Batch Sizes Chosen
 
 | **Number** | **Regressor Epoch**     | **Regressor Batch Sizes** | **KFolds**  | **Model Epochs** |  **R2** |
-| :---  |    :----:  |    :----:  |   :----:  |  :----:  |    :----:  |      
+| :---  |    :----:  |    :----:  |   :----:  |  :----:  |    :----:  |  
 |*1.*   | *25*   |  *25* | *10* | *10* | *0.985* |
 | 2.   | 40   |  25 | 20 | 10 | 0.894 |
 | 3.   | 20   |  25 | 20 | 10 | 0.966 |
