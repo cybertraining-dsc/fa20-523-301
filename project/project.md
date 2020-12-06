@@ -183,7 +183,7 @@ When the team ran the Neural Networks, the data went through three layers. Each 
 **Table 4:** Epochs and Batch Sizes Chosen
 
 | **Number** | **Regressor Epoch**     | **Regressor Batch Sizes** | **KFolds**  | **Model Epochs** |  **R2** |
-| :---  |    :----:  |    :----:  |   :----:  |  :----:  |    :----:  |  
+| :---  |    :----:  |    :----:  |   :----:  |  :----:  |    :----:  |
 |*1.*   | *25*   |  *25* | *10* | *10* | *0.985* |
 | 2.   | 40   |  25 | 20 | 10 | 0.894 |
 | 3.   | 20   |  25 | 20 | 10 | 0.966 |
