@@ -213,7 +213,7 @@ With respect to the current work, the models could be continued to be refined. C
 
 ## 7. Acknowledgements
 
-The authors would like to thank Dr. Gregor Von Laszewski, Dr. Geoffrey Fox, and the associate instructors in the *FA20-BL-ENGR-E534-11530: Big Data Applications* course (offered in the Fall 2020 semester at Indiana University, Bloomington) for their continued assistance and suggestions with regard to exploring this idea and also for their aid with preparing the various drafts of this article. In addition to that the community of students from the *FA20-BL-ENGR-E534-11530: Big Data Applications* course also deserve a thanks from the author for the support, continued engagement, and valuable discussions through Piazza.
+The authors would like to thank Dr. Gregor von Laszewski, Dr. Geoffrey Fox, and the associate instructors in the *FA20-BL-ENGR-E534-11530: Big Data Applications* course (offered in the Fall 2020 semester at Indiana University, Bloomington) for their continued assistance and suggestions with regard to exploring this idea and also for their aid with preparing the various drafts of this article. In addition to that the community of students from the *FA20-BL-ENGR-E534-11530: Big Data Applications* course also deserve a thanks from the author for the support, continued engagement, and valuable discussions through Piazza.
 
 ### 7.1 Work Breakdown
 
