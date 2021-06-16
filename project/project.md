@@ -1,4 +1,14 @@
-# NBA Performance and Injury
+---
+date: 2021-03-15
+title: NBA Performance and Injury
+linkTitle: NBA
+tags: ["project", "ai", "sports", "health"]
+description: NBA Performance and Injury
+author: Gavin Hemmerlein
+resources:
+- src: "**.{png,jpg}"
+  title: "Image #:counter"
+---
 
 [![Check Report](https://github.com/cybertraining-dsc/fa20-523-301/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-301/actions)
 [![Status](https://github.com/cybertraining-dsc/fa20-523-301/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/fa20-523-301/actions)
