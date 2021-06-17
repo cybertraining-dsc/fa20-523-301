@@ -129,7 +129,7 @@ To help with review of the data, conditioned data was used to save resources on 
 | 6.   | injuries_2010-2018       |
 | 7.   | players      |
 | 8.   | ranking       |
-| 9.   | teams       |
+| 9.   | teams        |
 
 Every time Google Colab loads data, it takes time and resources. The team was able to utilize the cross platform connectivity of the Google utilities. The team could then focus on building models as opposed to conditioning data every time the code was ran.
 
