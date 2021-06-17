@@ -5,6 +5,7 @@ linkTitle: NBA
 tags: ["project", "ai", "sports", "health"]
 description: "Sports Medicine will be a $7.2 billion dollar industry by 2025. The NBA has a vested interest in predicting performance of players as they return from injury. The authors evaluated datasets available to the public within the 2010 decade to build machine and deep learning models to expect results. The team utilized Gradient Based Regressor, Light GBM, and Keras Deep Learning models. The results showed that the coefficient of determination for the deep learning model was approximately 98.5%. The team recommends future work to predicting individual player performance utilizing the Keras model."
 author: Gavin Hemmerlein
+github_url: https://github.com/cybertraining-dsc/fa20-523-301/edit/main/project/project.md
 resources:
 - src: "**.{png,jpg}"
   title: "Image #:counter"
